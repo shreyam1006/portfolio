@@ -54,7 +54,7 @@ export default function Blog() {
               <path
                 d="M91.164062,20.183594h171.007813v19.269531h-171.007813v-19.269531Zm0,0"
                 transform="translate(-.378944 0.028095)"
-                fill="#ffcc53"
+                fill="#FFDF70"
                 stroke="#000"
               />
             </g>
@@ -104,7 +104,7 @@ export default function Blog() {
             <g>
               <path
                 d="M91.164062,158.238281h171.007813v13.578125h-171.007813v-13.578125Zm0,0"
-                fill="#ffcc53"
+                fill="#FFDF70"
                 stroke-width="2"
               />
             </g>
@@ -138,7 +138,7 @@ export default function Blog() {
           <path
             d="M130.015625,158.238281h53.390625v13.578125h-53.390625v-13.578125Zm0,0"
             transform="translate(.000001 0)"
-            fill="#f4a261"
+            fill="#F7A474"
           />
           <g clip-path="url(#ejQcAnIEep738)">
             <g>
@@ -179,7 +179,7 @@ export default function Blog() {
                 d="M170.25,48.785156h84.472656v8.195313h-84.472656v-8.195313Zm0,0"
                 transform="translate(0 0.000001)"
                 opacity="0"
-                fill="#264653"
+                fill="#C8D98E"
                 stroke="#000"
                 stroke-dasharray="185.34"
               />
@@ -197,7 +197,7 @@ export default function Blog() {
                 id="ejQcAnIEep751"
                 d="M170.25,61.984375h84.472656v8.191406h-84.472656v-8.191406Zm0,0"
                 opacity="0"
-                fill="#264653"
+                fill="#C8D98E"
                 stroke="#000"
               />
             </g>
@@ -212,7 +212,7 @@ export default function Blog() {
                 d="M170.25,75.328125h84.472656v8.191406h-84.472656v-8.191406Zm0,0"
                 transform="translate(0-.49854)"
                 opacity="0"
-                fill="#264653"
+                fill="#C8D98E"
                 stroke="#000"
               />
             </g>
@@ -226,7 +226,7 @@ export default function Blog() {
                 id="ejQcAnIEep761"
                 d="M170.25,88.761719h84.472656v8.191406h-84.472656v-8.191406Zm0,0"
                 opacity="0"
-                fill="#264653"
+                fill="#C8D98E"
                 stroke="#000"
               />
             </g>
@@ -315,7 +315,7 @@ export default function Blog() {
             rx="0"
             ry="0"
             transform="translate(19.793082 59.039086)"
-            fill="#94d1ee"
+            fill="#F480A3"
             fill-opacity="0"
             stroke="#000"
           />
@@ -323,27 +323,27 @@ export default function Blog() {
             id="ejQcAnIEep774"
             d="M-18.555501,-24.1L-9.531466,-24.1L-29.531466,-24.1L-18.555501,-24.1Z"
             transform="translate(52.968996 130.355675)"
-            fill="#2a9d8f"
+            fill="#B6CDDC"
             stroke="#000"
           />
           <path
             id="ejQcAnIEep775"
             d="M-10.609613,-14.1L2.468534,-14.1L-29.531466,-14.1L-10.609613,-14.1Z"
             transform="translate(72.491576 120.354166)"
-            fill="#2a9d8f"
+            fill="#B6CDDC"
             stroke="#000"
           />
         </g>
         <path
           d="M23.184197,22.145599c-3.490365-3.224463-7.895831,2.404706,0,6.56325c7.895831-4.158544,3.490365-9.787713,0-6.56325Z"
           transform="translate(79.562232 215.795141)"
-          fill="#e76f51"
+          fill="#F7A474"
           stroke="#000"
         />
         <path
           d="M23.184197,22.145599c-3.490365-3.224463-7.895831,2.404706,0,6.56325c7.895831-4.158544,3.490365-9.787713,0-6.56325Z"
           transform="translate(94.664183 215.795141)"
-          fill="#e76f51"
+          fill="#F7A474"
           stroke="#000"
         />
         <rect
@@ -361,20 +361,20 @@ export default function Blog() {
           rx="0"
           ry="0"
           transform="translate(227.587151 98.960203)"
-          fill="#e76f51"
+          fill="#F7A474"
           stroke="#000"
         />
         <circle
           id="ejQcAnIEep780"
           r="1"
           transform="translate(121.848385 143.187991)"
-          fill="#ffcc53"
+          fill="#FFDF70"
           stroke="#000"
         />
       </svg>
 
-      <div className="hover:scale-105 transition-all cursor-pointer lg:absolute bg-[#264653] w-fit px-5 py-2 m-3 border border-black">
-        <h2 className="font-neutral-900 text-3xl font-bold text-[#E9C46A]">
+      <div className="hover:scale-105 transition-all cursor-pointer lg:absolute bg-yellow w-fit px-5 py-2 m-3 border border-black">
+        <h2 className="font-neutral-900 text-3xl font-bold text-pink">
           Skills
         </h2>
       </div>

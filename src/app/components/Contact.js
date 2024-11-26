@@ -13,8 +13,8 @@ function BlackIconWrapper({ icon, ...rest }) {
   return (
     <IconWrapper
       icon={icon}
-      bgColor="bg-[#264653]"
-      textColor="text-[#E76F51]"
+      bgColor="bg-sage"
+      textColor="text-peach"
       {...rest}
     />
   );
@@ -24,8 +24,8 @@ function RedIconWrapper({ icon, ...rest }) {
   return (
     <IconWrapper
       icon={icon}
-      bgColor="bg-[#E9C46A]"
-      textColor="text-[#2A9D8F]"
+      bgColor="bg-yellow"
+      textColor="text-skyblue"
       {...rest}
     />
   );
@@ -53,14 +53,14 @@ export default function Contact() {
             rx="0"
             ry="0"
             transform="translate(60.17149 108.449952)"
-            fill="#e9c46a"
+            fill="#FFDF70"
             stroke-width="2"
           />
           <path
             id="ecfYqkDzjoQ3"
             d="M60.17149,102.131785h180l-56.262776,38.259286h-66.503538L60.17149,102.131785Z"
             transform="matrix(1.014566 0 0 1-2.187398 6.318167)"
-            fill="#fada8e"
+            fill="#FFDF70"
             stroke="#000"
           />
           <g id="ecfYqkDzjoQ4_to" transform="translate(112.311339,143.37819)">
@@ -79,27 +79,27 @@ export default function Contact() {
           <path
             d="M57.541567,231.197731l58.128647-61.740714l67.615265.555863l55.567062,61.184851h-181.310974Z"
             transform="translate(1.318949-22.747779)"
-            fill="#e9c46a"
+            fill="#FFDF70"
             stroke="#000"
           />
           <g id="ecfYqkDzjoQ6_to" transform="translate(165.331702,160.997459)">
             <path
               d="M34.184295,24.718736c-13.089115-12.08083-29.609924,9.009516,0,24.589991c29.609923-15.580475,13.089114-36.670821,0-24.589991Z"
               transform="translate(-49.999996,-50.074374)"
-              fill="#e76f51"
+              fill="#F7A474"
               stroke="#000"
             />
           </g>
           <path
             d="M117.537054,170.01288L59.065428,231.753594l.342979-100l58.128647,38.259286Z"
             transform="translate(-.547891-23.303642)"
-            fill="#fada8e"
+            fill="#FFDF70"
             stroke="#000"
           />
           <path
             d="M183.285482,170.012881l56.262776-38.259287v100l-56.262776-61.740713Z"
             transform="translate(.623232-23.303642)"
-            fill="#fada8e"
+            fill="#FFDF70"
             stroke="#000"
           />
           <g id="ecfYqkDzjoQ9_to" transform="translate(153.264699,121.816195)">
@@ -112,7 +112,7 @@ export default function Contact() {
               fontWeight="700"
               transform="translate(-41.068009,5.272683)"
               opacity="0"
-              fill="#e76f51"
+              fill="#F7A474"
               strokeWidth="0"
             >
               <tspan y="0" fontWeight="700" stroke-width="0">

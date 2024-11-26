@@ -15,7 +15,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
   const name = "Shreya Maheshwari".split("");
 
   const [subheadingIdx, setSubheadingIdx] = useState(0);
-  const subheading = "Creative Web Developer".split("");
+  const subheading = "Software Developer".split("");
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -50,7 +50,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[1]}
-          className="relative bg-[#F4A261] border border-black h-full w-full rounded-2xl"
+          className="relative bg-sage border border-black h-full w-full rounded-2xl"
           onClick={() => setCurrentGrid(GRIDS[2])}
         >
           <WorkExperience />
@@ -63,7 +63,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
         <animated.div
           onClick={() => setCurrentGrid(GRIDS[1])}
           style={trails[3]}
-          className="relative h-full w-full bg-[#2A9D8F] border border-black rounded-2xl"
+          className="relative h-full w-full bg-skyblue border border-black rounded-2xl"
         >
           <Projects />
         </animated.div>
@@ -74,7 +74,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[2]}
-          className="relative h-full w-full border border-neutral-900 bg-[#9ad1ea] rounded-2xl"
+          className="relative h-full w-full border border-neutral-900 bg-peach rounded-2xl"
         >
           <Education />
         </animated.div>
@@ -85,18 +85,18 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[0]}
-          className="h-full w-full p-10 bg-[#e9c46a] border border-black flex flex-col items-center justify-center gap-3 rounded-2xl"
+          className="h-full w-full p-10 bg-lavender border border-black flex flex-col items-center justify-center gap-3 rounded-2xl"
         >
-          <div className="border border-neutral-900 bg-[#264653]  w-fit px-2 py-3">
-            <span className="text-5xl font-bold" id="home">
+          <div className="border border-neutral-900 bg-white w-fit px-2 py-3">
+            <span className="text-5xl font-bold text-pink" id="home">
               {name.slice(0, nameIdx).join("")}
-              <span className="inline-block mx-2 w-6 h-1 bg-[#2A9D8F] animate-pulse"></span>
+              <span className="inline-block mx-2 w-6 h-1 bg-lavender animate-pulse"></span>
             </span>
           </div>
-          <div className="border text-center border-neutral-900 bg-[#264653] w-fit px-5 py-2">
-            <span className="md:text-md">
+          <div className="border text-center border-neutral-900 bg-white w-fit px-5 py-2">
+            <span className="md:text-md font-bold text-pink">
               {subheading.slice(0, subheadingIdx).join("")}
-              <span className="inline-block w-3 h-0.5 mx-1 bg-[#2A9D8F] animate-pulse"></span>
+              <span className="inline-block w-3 h-0.5 mx-1 bg-lavender animate-pulse"></span>
             </span>
           </div>
         </animated.div>
@@ -107,7 +107,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[4]}
-          className="h-full w-full relative border rounded-2xl border-neutral-900 bg-[#2A9D8F]"
+          className="h-full w-full relative border rounded-2xl border-neutral-900 bg-skyblue"
         >
           <Blog />
         </animated.div>
@@ -118,7 +118,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[5]}
-          className="h-full w-full relative border rounded-2xl border-neutral-900 bg-[#2A9D8F]"
+          className="h-full w-full relative border rounded-2xl border-neutral-900 bg-skyblue"
         >
           <Resume />
         </animated.div>
@@ -129,7 +129,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[4]}
-          className="h-full w-full md:flex justify-between items-center p-10 gap-5 bg-[#94d1ee] border border-black rounded-2xl"
+          className="h-full w-full md:flex justify-between items-center p-10 gap-5 bg-pink border border-black rounded-2xl"
         >
           <Contact />
         </animated.div>
@@ -140,7 +140,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[6]}
-          className="h-full w-full relative border border-neutral-900 bg-[#F4A261] rounded-2xl"
+          className="h-full w-full relative border border-neutral-900 bg-sage rounded-2xl"
         >
           <Misc />
         </animated.div>
