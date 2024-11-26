@@ -38,27 +38,30 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
   });
 
   return (
-    <animated.div className="grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-6 w-screen lg:h-screen p-5 gap-5 bg-stone-200">
+    <animated.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-6 w-full min-h-screen lg:h-screen p-3 sm:p-4 lg:p-5 gap-3 sm:gap-4 lg:gap-5 bg-stone-200">
       {/* Main heading section - larger and on the left */}
       <animated.div
         style={animatedStyles}
         onClick={() => setCurrentGrid(GRIDS[0])}
-        className="lg:col-span-4 lg:row-span-6"
+        className="md:col-span-2 lg:col-span-4 lg:row-span-6 h-[300px] md:h-auto"
       >
         <animated.div
           style={trails[0]}
-          className="w-full h-full p-10 bg-work-dark border border-black flex flex-col items-center text-center gap-6 rounded-2xl"
+          className="w-full h-full p-4 sm:p-6 lg:p-10 bg-work-dark border border-black flex flex-col items-center text-center gap-4 sm:gap-6 rounded-2xl"
         >
-          <div className="border border-neutral-900 bg-work-light w-fit px-3 py-3">
-            <span className="text-5xl font-bold text-work-accent" id="home">
+          <div className="border border-neutral-900 bg-work-light w-fit px-2 sm:px-3 py-2 sm:py-3">
+            <span
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-work-accent"
+              id="home"
+            >
               {name.slice(0, nameIdx).join("")}
-              <span className="inline-block mx-2 w-6 h-1 bg-work-green animate-pulse"></span>
+              <span className="inline-block mx-2 w-4 sm:w-6 h-1 bg-work-green animate-pulse"></span>
             </span>
           </div>
           <div className="border text-center border-neutral-900 bg-work-light w-fit px-2 py-2">
-            <span className="lg:text-lg text-work-accent">
+            <span className="text-sm sm:text-base lg:text-lg text-work-accent">
               {subheading.slice(0, subheadingIdx).join("")}
-              <span className="inline-block w-3 h-0.5 mx-1 bg-work-green animate-pulse"></span>
+              <span className="inline-block w-2 sm:w-3 h-0.5 mx-1 bg-work-green animate-pulse"></span>
             </span>
           </div>
         </animated.div>
@@ -67,7 +70,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       {/* Middle column */}
       <animated.div
         style={animatedStyles}
-        className="lg:col-span-5 lg:row-span-6"
+        className="md:col-span-2 lg:col-span-5 lg:row-span-6 h-[200px] md:h-auto"
       >
         <animated.div
           style={trails[1]}
@@ -78,7 +81,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       {/* Right column - top section */}
       <animated.div
         style={animatedStyles}
-        className="lg:col-span-3 lg:row-span-4"
+        className="md:col-span-1 lg:col-span-3 lg:row-span-4 h-[200px] md:h-auto"
       >
         <animated.div
           style={trails[2]}
@@ -89,7 +92,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       {/* Right column - bottom section */}
       <animated.div
         style={animatedStyles}
-        className="lg:col-span-3 lg:row-span-2"
+        className="md:col-span-1 lg:col-span-3 lg:row-span-2 h-[200px] md:h-auto"
       >
         <animated.div
           style={trails[3]}
