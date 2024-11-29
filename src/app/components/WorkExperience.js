@@ -1,4 +1,4 @@
-import "./work-experience.css";
+import "../styles/  ``1 11` Q1`Q  Awork-experience.css";
 
 export default function WorkExperience() {
   return (

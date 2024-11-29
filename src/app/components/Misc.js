@@ -1,4 +1,4 @@
-import "./misc.css";
+import "../styles/misc.css";
 
 export default function Misc() {
   return (

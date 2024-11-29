@@ -7,7 +7,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import "./contact.css";
+import "../styles/contact.css";
 
 function BlackIconWrapper({ icon, ...rest }) {
   return (
