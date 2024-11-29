@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTrail, animated, easings } from "@react-spring/web";
-
 import { GRIDS } from "../constants";
+import Image from "next/image";
+import work from "./Work.svg";
 
 export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
   const [nameIdx, setNameIdx] = useState(0);
@@ -47,22 +48,31 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[0]}
-          className="w-full h-full p-4 sm:p-6 lg:p-10 bg-work-dark border border-black flex flex-col items-center text-center gap-4 sm:gap-6 rounded-2xl"
+          className="w-full h-full p-4 sm:p-6 lg:p-10 bg-skyblue border border-black flex flex-col items-center text-center gap-4 sm:gap-6 rounded-2xl"
         >
-          <div className="border border-neutral-900 bg-work-light w-fit px-2 sm:px-3 py-2 sm:py-3">
+          <div className="border border-neutral-900 bg-yellow w-fit px-2 sm:px-3 py-2 sm:py-3">
             <span
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-work-accent"
+              className="text-3xl sm:text-4xl lg:text-7xl font-bold text-pink"
               id="home"
             >
               {name.slice(0, nameIdx).join("")}
-              <span className="inline-block mx-2 w-4 sm:w-6 h-1 bg-work-green animate-pulse"></span>
+              <span className="inline-block mx-2 w-4 sm:w-6 h-1 bg-peach animate-pulse"></span>
             </span>
           </div>
-          <div className="border text-center border-neutral-900 bg-work-light w-fit px-2 py-2">
-            <span className="text-sm sm:text-base lg:text-lg text-work-accent">
+          <div className="border text-center border-neutral-900 bg-yellow w-fit px-2 py-2">
+            <span className="text-sm sm:text-base lg:text-lg text-pink font-semibold">
               {subheading.slice(0, subheadingIdx).join("")}
-              <span className="inline-block w-2 sm:w-3 h-0.5 mx-1 bg-work-green animate-pulse"></span>
+              <span className="inline-block w-2 sm:w-3 h-0.5 mx-1 bg-peach animate-pulse"></span>
             </span>
+          </div>
+          <div className="w-[800px] h-[800px] -mt-24 relative">
+            <Image
+              src={work}
+              alt="Work animation"
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
           </div>
         </animated.div>
       </animated.div>
@@ -74,7 +84,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[1]}
-          className="w-full h-full bg-work-green border border-black rounded-2xl"
+          className="w-full h-full bg-sage border border-black rounded-2xl"
         ></animated.div>
       </animated.div>
 
@@ -85,7 +95,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[2]}
-          className="w-full h-full bg-work-accent border border-black rounded-2xl"
+          className="w-full h-full bg-peach border border-black rounded-2xl"
         ></animated.div>
       </animated.div>
 
@@ -96,7 +106,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[3]}
-          className="w-full h-full bg-work-yellow border border-black rounded-2xl"
+          className="w-full h-full bg-yellow border border-black rounded-2xl"
         ></animated.div>
       </animated.div>
     </animated.div>
