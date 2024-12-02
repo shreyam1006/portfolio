@@ -43,8 +43,14 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[1]}
-          className="w-full h-full bg-sage border border-black rounded-xl"
-        ></animated.div>
+          className="group relative w-full h-full"
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
+          <span className="absolute inset-0 w-full h-full bg-sage border border-neutral-900 rounded-xl"></span>
+          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
+            xG
+          </span>
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -53,8 +59,14 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[3]}
-          className="w-full h-full relative bg-pink border border-black rounded-xl"
-        ></animated.div>
+          className="group relative w-full h-full"
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
+          <span className="absolute inset-0 w-full h-full bg-pink border border-neutral-900 rounded-xl"></span>
+          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
+            Review Mate
+          </span>
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -63,8 +75,14 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[2]}
-          className="w-full h-full relative bg-peach border border-neutral-900 rounded-xl"
-        ></animated.div>
+          className="group relative w-full h-full"
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
+          <span className="absolute inset-0 w-full h-full bg-peach border border-neutral-900 rounded-xl"></span>
+          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
+            DAM
+          </span>
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -74,20 +92,25 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[0]}
-          className="w-full h-full p-10 bg-skyblue border border-black rounded-xl flex flex-col items-center justify-center gap-3"
+          className="group relative w-full h-full"
         >
-          <div className="border border-neutral-900 bg-yellow w-fit px-5 py-3">
-            <span className="text-5xl font-bold text-pink" id="home">
-              {name.slice(0, nameIdx).join("")}
-              <span className="inline-block mx-2 w-6 h-1 bg-lavender animate-pulse"></span>
-            </span>
-          </div>
-          <div className="border text-center border-neutral-900 bg-yellow w-fit px-5 py-2">
-            <span className="lg:text-md text-pink font-semibold">
-              {subheading.slice(0, subheadingIdx).join("")}
-              <span className="inline-block w-3 h-0.5 mx-1 bg-lavender animate-pulse"></span>
-            </span>
-          </div>
+          <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
+          <span className="absolute inset-0 w-full h-full bg-skyblue border border-neutral-900 rounded-xl">
+            <div className="w-full h-full p-10 flex flex-col items-center justify-center gap-3">
+              <div className="border border-neutral-900 bg-yellow w-fit px-5 py-3">
+                <span className="text-5xl font-bold text-pink" id="home">
+                  {name.slice(0, nameIdx).join("")}
+                  <span className="inline-block mx-2 w-6 h-1 bg-lavender animate-pulse"></span>
+                </span>
+              </div>
+              <div className="border text-center border-neutral-900 bg-yellow w-fit px-5 py-2">
+                <span className="lg:text-md text-pink font-semibold">
+                  {subheading.slice(0, subheadingIdx).join("")}
+                  <span className="inline-block w-3 h-0.5 mx-1 bg-lavender animate-pulse"></span>
+                </span>
+              </div>
+            </div>
+          </span>
         </animated.div>
       </animated.div>
 
@@ -97,8 +120,14 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[4]}
-          className="w-full h-full relative bg-peach border border-neutral-900 rounded-xl"
-        ></animated.div>
+          className="group relative w-full h-full"
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
+          <span className="absolute inset-0 w-full h-full bg-peach border border-neutral-900 rounded-xl"></span>
+          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
+            FIFO
+          </span>
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -107,8 +136,14 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[5]}
-          className="w-full h-full relative bg-pink border border-neutral-900 rounded-xl"
-        ></animated.div>
+          className="group relative w-full h-full"
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
+          <span className="absolute inset-0 w-full h-full bg-pink border border-neutral-900 rounded-xl"></span>
+          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
+            Glue
+          </span>
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -117,8 +152,14 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[4]}
-          className="w-full h-full lg:flex justify-between items-center p-10 gap-5 bg-sage border border-black rounded-xl"
-        ></animated.div>
+          className="group relative w-full h-full"
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
+          <span className="absolute inset-0 w-full h-full bg-sage border border-neutral-900 rounded-xl"></span>
+          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
+            Crusadify
+          </span>
+        </animated.div>
       </animated.div>
     </animated.div>
   );
