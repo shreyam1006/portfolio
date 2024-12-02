@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTrail, animated, easings } from "@react-spring/web";
 import { GRIDS } from "../constants";
+import LandingPage from "./LandingPage";
 
 export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
   const [nameIdx, setNameIdx] = useState(0);
@@ -71,7 +72,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:col-span-3 lg:row-span-6"
+        className="lg:col-span-3 lg:row-span-6 "
       >
         <animated.div
           style={trails[2]}
@@ -79,9 +80,29 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
         >
           <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
           <span className="absolute inset-0 w-full h-full bg-peach border border-neutral-900 rounded-xl"></span>
-          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
-            DAM
-          </span>
+          <div className="flex flex-col absolute inset-0 gap-6 overflow-hidden">
+            <div className="flex flex-col">
+              <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-4xl px-4 py-4 font-bold w-2/3 items-center justify-end -translate-x-4">
+                Digital
+              </span>
+              <span className="flex bg-sage border-black border rounded-tr-xl rounded-br-xl text-4xl px-4 py-4 font-bold w-5/6 items-center justify-end -translate-x-4 -translate-y-2">
+                Asset
+              </span>
+              <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-4xl px-4 py-4 font-bold w-3/4 items-center justify-end -translate-x-4 -translate-y-4">
+                Manager
+              </span>
+            </div>
+            <div className="flex flex-col px-8 gap-2 text-black">
+              <h1 className="text-5xl font-semibold">Organize</h1>
+              <h1 className="text-5xl font-semibold">Your Assets.</h1>
+
+              <p className="text-xl">
+                A software solution that centralizes, organizes, and facilitates
+                the storage, retrieval, and sharing of digital assets such as
+                images, videos, and documents.
+              </p>
+            </div>
+          </div>
         </animated.div>
       </animated.div>
 
@@ -124,9 +145,27 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
         >
           <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
           <span className="absolute inset-0 w-full h-full bg-peach border border-neutral-900 rounded-xl"></span>
-          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
-            FIFO
-          </span>
+          <div className="absolute inset-0 flex flex-col text-black">
+            <div className="flex flex-col px-8 py-6 gap-2 text-black">
+              <h1 className="text-3xl font-semibold">Blogging Platform</h1>
+              <h1 className="text-3xl font-semibold">for D2C Insights.</h1>
+              <p className="text-md">
+                A blogging platform that empowers direct-to-consumer (D2C)
+                businesses with real-time insights and community engagement.
+              </p>
+            </div>
+            <div className="flex px-8 gap-2">
+              <div className="flex rounded-xl border border-black py-4 px-12  bg-sage">
+                Post
+              </div>
+              <div className="flex rounded-xl border border-black py-4 px-12  bg-lavender">
+                Post
+              </div>
+              <div className="flex rounded-xl border border-black py-4 px-12  bg-pink">
+                Post
+              </div>
+            </div>
+          </div>
         </animated.div>
       </animated.div>
 
@@ -140,9 +179,21 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
         >
           <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
           <span className="absolute inset-0 w-full h-full bg-pink border border-neutral-900 rounded-xl"></span>
-          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
-            Glue
-          </span>
+          <div className="absolute inset-0 flex flex-col text-black">
+            <div className="bg-lavender w-4/5 py-12 border border-black rounded-tl-xl rounded-br-full">
+              GLUE
+            </div>
+            <div className="flex flex-col px-8 py-4 gap-2 text-black">
+              <h1 className="text-3xl font-semibold">
+                Connecting Brands and Fans with Engaging AI.
+              </h1>
+              <p className="text-lg">
+                Allows brands to create fan pages featuring AI-generated videos,
+                enhancing engagement and fostering loyalty through a gamified
+                rewards system.
+              </p>
+            </div>
+          </div>
         </animated.div>
       </animated.div>
 
@@ -156,9 +207,26 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
         >
           <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
           <span className="absolute inset-0 w-full h-full bg-sage border border-neutral-900 rounded-xl"></span>
-          <span className="absolute inset-0 flex items-center justify-center text-black font-medium">
-            Crusadify
-          </span>
+          <div className="absolute inset-0 flex flex-col text-black overflow-hidden">
+            <div className="flex flex-col px-8 py-6 gap-2">
+              <h1 className="text-xl font-semibold">Landing Page Builder.</h1>
+              <p className="text-sm">
+                An innovative no-code platform enabling Shopify store owners to
+                create high-converting landing pages effortlessly.
+              </p>
+            </div>
+            <div className="relative h-full card">
+              <div className="absolute inset-x-20 bottom-0 rounded-xl bg-pink h-full border border-black transform left text-center">
+                OH!!
+              </div>
+              <div className="absolute inset-x-20 bottom-0 rounded-xl bg-lavender h-full border border-black text-center">
+                OH!!
+              </div>
+              <div className="absolute inset-x-20 bottom-0 rounded-xl bg-yellow h-full border border-black transform right">
+                <LandingPage />
+              </div>
+            </div>
+          </div>
         </animated.div>
       </animated.div>
     </animated.div>
