@@ -14,7 +14,7 @@ const aiServices = [
   },
   {
     name: "Google AI",
-    color: "#B6CDDC", // pink
+    color: "#F480A3", // pink
     icon: (
       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-black">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -91,7 +91,7 @@ const Dashgen = () => {
   return (
     <Fragment>
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
-      <span className="absolute inset-0 w-full h-full bg-pink border border-neutral-900 rounded-xl"></span>
+      <span className="absolute inset-0 w-full h-full bg-skyblue border border-neutral-900 rounded-xl"></span>
       <div className="absolute inset-0 flex text-black">
         <div className="relative w-1/3 h-full">
           {icons.map((icon, index) => {
