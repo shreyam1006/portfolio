@@ -4,18 +4,19 @@ const Glue = () => {
   return (
     <Fragment>
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
-      <span className="absolute inset-0 w-full h-full bg-purple border border-neutral-900 rounded-xl"></span>
-      <div className="absolute inset-0 flex text-black font-medium">
-        <div>GLUE</div>
-        <div className="flex flex-col px-8 gap-2 my-auto text-black">
-          <h1 className="text-2xl font-semibold">
-            Generative Language Understanding Engine
+      <span className="absolute inset-0 w-full h-full bg-pink border border-neutral-900 rounded-xl"></span>
+      <div className="absolute inset-0 flex flex-col text-black">
+        <div className="bg-skyblue w-4/5 py-12 border border-black rounded-tl-xl rounded-br-full">
+          GLUE
+        </div>
+        <div className="flex flex-col px-8 py-4 gap-2 text-white font-semibold">
+          <h1 className="text-3xl text-black">
+            Connecting Brands and Fans with Engaging AI.
           </h1>
-          <p>
-            An advanced natural language processing system designed to
-            understand and generate human-like text, leveraging state-of-the-art
-            machine learning models for enhanced language comprehension and
-            generation.
+          <p className="text-lg">
+            Allows brands to create fan pages featuring AI-generated videos,
+            enhancing engagement and fostering loyalty through a gamified
+            rewards system.
           </p>
         </div>
       </div>
