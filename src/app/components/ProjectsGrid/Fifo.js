@@ -1,15 +1,22 @@
 import { Fragment } from "react";
 
 const Fifo = () => {
-  // News ticker items with their corresponding background colors
   const newsItems = [
     { text: "Latest Blog Post", bgColor: "bg-sage" },
     { text: "Featured Article", bgColor: "bg-pink" },
     { text: "Trending Topics", bgColor: "bg-lavender" },
     { text: "New Insights", bgColor: "bg-skyblue" },
-    { text: "Community Updates", bgColor: "bg-yellow" },
-    { text: "Top Stories", bgColor: "bg-peach" },
+    { text: "Community", bgColor: "bg-yellow" },
   ];
+
+  const NewsItem = ({ text, bgColor }) => (
+    <div
+      className={`flex items-center h-16 justify-center min-w-[150px] px-6 py-4 text-black font-medium border border-neutral-900 rounded-lg mx-1 ${bgColor}`}
+    >
+      {text}
+    </div>
+  );
+
   return (
     <Fragment>
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
@@ -27,35 +34,28 @@ const Fifo = () => {
             businesses with real-time insights and community engagement.
           </p>
         </div>
-        <div className="px-8 h-16 overflow-hidden">
-          <div className="news-ticker-wrapper relative whitespace-nowrap">
-            <div className="news-ticker flex animate-scroll">
+        <div>
+          <div className="group relative flex overflow-x-hidden overflow-y-hidden">
+            <div className="flex animate-marquee group-hover:pause">
               {newsItems.map((item, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center justify-center min-w-[150px] px-6 py-4 text-black font-medium border border-neutral-900 rounded-lg mx-1 ${item.bgColor}`}
-                >
-                  {item.text}
-                </div>
+                <NewsItem
+                  key={`first-${index}`}
+                  text={item.text}
+                  bgColor={item.bgColor}
+                />
+              ))}
+            </div>
+
+            <div className="flex absolute top-0 animate-marquee2 group-hover:pause">
+              {newsItems.map((item, index) => (
+                <NewsItem
+                  key={`second-${index}`}
+                  text={item.text}
+                  bgColor={item.bgColor}
+                />
               ))}
             </div>
           </div>
-          <style jsx global>{`
-            @keyframes scroll {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-            .animate-scroll {
-              animation: scroll 20s linear infinite;
-            }
-            .news-ticker-wrapper:hover .animate-scroll {
-              animation-play-state: paused;
-            }
-          `}</style>
         </div>
       </div>
     </Fragment>
