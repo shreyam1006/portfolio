@@ -42,6 +42,20 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        starSpin: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        starScale: {
+          "0%": { transform: "scale(0.35)" },
+          "50%": { transform: "scale(1)" },
+          "100%": { transform: "scale(0.35)" },
+        },
+        cardSpread: {
+          "0%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(10px)" },
+          "100%": { transform: "translateX(0)" },
+        },
       },
       animation: {
         marquee: "marquee 25s linear infinite",
@@ -50,6 +64,9 @@ module.exports = {
         "flip-forward": "flip 0.6s ease-out forwards",
         "flip-backward": "flipBack 0.6s ease-out forwards",
         float: "float 3s ease-in-out infinite",
+        "star-spin": "starSpin 4s linear infinite",
+        "star-scale": "starScale 4s linear infinite",
+        "card-spread": "cardSpread 1.5s ease-in-out infinite",
       },
     },
   },
