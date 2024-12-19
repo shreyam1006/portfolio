@@ -1,13 +1,13 @@
 import { useTrail, animated, easings } from "@react-spring/web";
-import { GRIDS } from "../constants";
-import LandingPage from "./LandingPage";
-import Xg from "./ProjectsGrid/Xg";
-import Dashgen from "./ProjectsGrid/Dashgen";
-import Dam from "./ProjectsGrid/Dam";
-import Fifo from "./ProjectsGrid/Fifo";
-import Glue from "./ProjectsGrid/Glue";
-import ReviewMate from "./ProjectsGrid/ReviewMate";
-import Heading from "./ProjectsGrid/Heading";
+import { GRIDS } from "../../constants";
+import LandingPage from "../LandingPage";
+import Xg from "./Xg";
+import Dashgen from "./Dashgen";
+import Dam from "./Dam";
+import Fifo from "./Fifo";
+import Glue from "./Glue";
+import ReviewMate from "./ReviewMate";
+import Heading from "./Heading";
 
 export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
   const trails = useTrail(7, {
