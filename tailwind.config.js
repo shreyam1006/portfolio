@@ -42,6 +42,10 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        floatSlow: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
         starSpin: {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
@@ -69,6 +73,9 @@ module.exports = {
         "flip-forward": "flip 0.6s ease-out forwards",
         "flip-backward": "flipBack 0.6s ease-out forwards",
         float: "float 3s ease-in-out infinite",
+        "float-slow": "floatSlow 4s ease-in-out infinite",
+        "float-medium": "floatMedium 3s ease-in-out infinite",
+        "float-fast": "floatFast 2s ease-in-out infinite",
         "star-spin": "starSpin 4s linear infinite",
         "star-scale": "starScale 4s linear infinite",
         "card-spread": "cardSpread 1.5s ease-in-out infinite",
