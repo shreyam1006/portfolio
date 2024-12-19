@@ -1,10 +1,65 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import TextIcon from "../Icons/TextIcon";
 import IconsIcon from "../Icons/IconsIcon";
 import MediaIcon from "../Icons/MediaIcon";
 import LogosIcon from "../Icons/LogosIcon";
 import LinksIcon from "../Icons/LinksIcon";
 import DocumentsIcon from "../Icons/DocumentsIcon";
+
+const tools = [
+  {
+    icon: TextIcon,
+    label: "Text",
+    description: "Edit Text Content",
+    color: "pink",
+  },
+  {
+    icon: MediaIcon,
+    label: "Media",
+    description: "Manage Media Files",
+    color: "sage",
+  },
+  {
+    icon: LogosIcon,
+    label: "Logos",
+    description: "Brand Logo Storage",
+    color: "skyblue",
+  },
+  {
+    icon: LinksIcon,
+    label: "Links",
+    description: "Link Management Hub",
+    color: "lavender",
+  },
+  {
+    icon: DocumentsIcon,
+    label: "Doc",
+    description: "Document Control Center",
+    color: "yellow",
+  },
+];
+
+const FlipContainer = ({ frontContent, backContent, color }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div className="flip-container">
+      <div
+        className={`relative preserve-3d cursor-pointer bg-${color} rounded-lg ${
+          isFlipped ? "animate-flip-forward" : "animate-flip-backward"
+        }`}
+        onClick={() => setIsFlipped(!isFlipped)}
+      >
+        <div className="flex hover:scale-105 transition-transform flex-col items-center gap-2 bg-inherit border border-black rounded-md p-4 backface-hidden text-black">
+          {frontContent}
+        </div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-inherit border border-black rounded-md p-4 backface-hidden [transform:rotateY(180deg)]">
+          {backContent}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Dam = () => {
   return (
@@ -29,40 +84,36 @@ const Dam = () => {
             <h2 className="text-5xl text-black">Your Assets.</h2>
           </div>
         </div>
-        <div className="flex border border-black w-4/5 self-center rounded-md bg-white text-black p-4">
-          <div className="flex justify-between w-full items-center">
-            <div className="flex flex-col items-center gap-2">
-              <TextIcon width={24} height={24} />
-              <span className="text-sm font-medium">Text</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <MediaIcon width={24} height={24} />
-              <span className="text-sm font-medium">Media</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <LogosIcon width={24} height={24} />
-              <span className="text-sm font-medium">Logos</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <LinksIcon width={24} height={24} />
-              <span className="text-sm font-medium">Links</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <DocumentsIcon width={24} height={24} />
-              <span className="text-sm font-medium">Documents</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <IconsIcon width={24} height={24} />
-              <span className="text-sm font-medium">Icons</span>
-            </div>
-          </div>
-        </div>
+
         <div className="flex flex-col px-8 gap-2 text-black">
           <p className="text-xl">
             A software solution that centralizes, organizes, and facilitates the
             storage, retrieval, and sharing of digital assets such as images,
             videos, and documents.
           </p>
+        </div>
+
+        <div className="grid grid-cols-5 gap-3 self-center items-center justify-center w-full px-4">
+          {tools.map((tool, index) => (
+            <div key={index}>
+              <FlipContainer
+                color={tool.color}
+                frontContent={
+                  <>
+                    <tool.icon width={24} height={24} />
+                    <span className="text-sm font-medium text-black">
+                      {tool.label}
+                    </span>
+                  </>
+                }
+                backContent={
+                  <p className="text-sm font-medium text-black text-center">
+                    {tool.description}
+                  </p>
+                }
+              />
+            </div>
+          ))}
         </div>
       </div>
     </Fragment>

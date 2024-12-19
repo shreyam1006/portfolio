@@ -30,13 +30,38 @@ module.exports = {
           "0%": { transform: "translateX(-100%)", opacity: "0" },
           "100%": { transform: "translateX(-1rem)", opacity: "1" },
         },
+        flip: {
+          "0%": { transform: "perspective(1000px) rotateY(0deg)" },
+          "100%": { transform: "perspective(1000px) rotateY(180deg)" },
+        },
+        flipBack: {
+          "0%": { transform: "perspective(1000px) rotateY(180deg)" },
+          "100%": { transform: "perspective(1000px) rotateY(0deg)" },
+        },
       },
       animation: {
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
         slideFromLeft: "slideFromLeft 0.8s ease-out",
+        "flip-forward": "flip 0.6s ease-out forwards",
+        "flip-backward": "flipBack 0.6s ease-out forwards",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".preserve-3d": {
+          "transform-style": "preserve-3d",
+          perspective: "1000px",
+        },
+        ".backface-hidden": {
+          "backface-visibility": "hidden",
+        },
+        ".flip-container": {
+          perspective: "1000px",
+        },
+      });
+    },
+  ],
 };
