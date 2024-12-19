@@ -92,13 +92,13 @@ const Dam = () => {
       <div className="flex flex-col absolute inset-0 gap-10 overflow-hidden">
         <div className="flex gap-6">
           <div className="flex flex-col gap-1 w-full text-black font-medium self-start pb-12">
-            <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/5 items-center justify-end -translate-x-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105  hover:brightness-110 animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
+            <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/5 items-center justify-end -translate-x-4 transition-all duration-500 ease-in-out hover:scale-110 hover:translate-x-4 hover:w-[85%] animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
               Digital
             </span>
-            <span className="flex bg-peach border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-700 hover:-translate-x-2 hover:scale-105 hover:brightness-110 animate-slideFromLeft opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-peach border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-500 ease-in-out hover:scale-110 hover:translate-x-4 hover:w-[70%] animate-slideFromLeft opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
               Asset
             </span>
-            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-9/10 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 hover:brightness-110 animate-slideFromLeft opacity-0 [animation-delay:1600ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-11/12 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-500 ease-in-out hover:scale-110 hover:translate-x-4 hover:w-[95%] animate-slideFromLeft opacity-0 [animation-delay:1600ms] [animation-fill-mode:forwards]">
               Manager
             </span>
           </div>
