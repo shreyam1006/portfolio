@@ -118,6 +118,54 @@ const WateringCan = ({ isPouring }) => {
             />
           </g>
         )}
+        {/* Glitter particles */}
+        <g className="glitter-particles">
+          <circle
+            cx="82"
+            cy="25"
+            r="2.5"
+            className="glitter-1"
+            fill="#F480A3"
+            stroke="#2D3748"
+            strokeWidth="0.5"
+          />
+          <circle
+            cx="60"
+            cy="20"
+            r="2.5"
+            className="glitter-2"
+            fill="#B6CDDC"
+            stroke="#2D3748"
+            strokeWidth="0.5"
+          />
+          <circle
+            cx="75"
+            cy="50"
+            r="2.5"
+            className="glitter-3"
+            fill="#FFDF70"
+            stroke="#2D3748"
+            strokeWidth="0.5"
+          />
+          <circle
+            cx="85"
+            cy="40"
+            r="2.5"
+            className="glitter-4"
+            fill="#C8D98E"
+            stroke="#2D3748"
+            strokeWidth="0.5"
+          />
+          <circle
+            cx="68"
+            cy="35"
+            r="2.5"
+            className="glitter-5"
+            fill="#F7A474"
+            stroke="#2D3748"
+            strokeWidth="0.5"
+          />
+        </g>
       </svg>
       <style jsx>{`
         @keyframes dropFall {
@@ -128,6 +176,15 @@ const WateringCan = ({ isPouring }) => {
           100% {
             transform: translateY(90px) translateX(-100px);
             opacity: 0;
+          }
+        }
+        @keyframes twinkle {
+          0%,
+          100% {
+            opacity: 0.2;
+          }
+          50% {
+            opacity: 1;
           }
         }
         .water-drops circle {
@@ -141,6 +198,24 @@ const WateringCan = ({ isPouring }) => {
         }
         .animate-drop3 {
           animation-delay: 2s;
+        }
+        .glitter-particles circle {
+          animation: twinkle 1.5s infinite ease-in-out;
+        }
+        .glitter-1 {
+          animation-delay: 0s;
+        }
+        .glitter-2 {
+          animation-delay: 0.3s;
+        }
+        .glitter-3 {
+          animation-delay: 0.6s;
+        }
+        .glitter-4 {
+          animation-delay: 0.9s;
+        }
+        .glitter-5 {
+          animation-delay: 1.2s;
         }
       `}</style>
     </div>
