@@ -21,13 +21,13 @@ const tools = [
   },
   {
     icon: LogosIcon,
-    label: "Logos",
+    label: "Logo",
     description: "Brand Logo Storage",
     color: "skyblue",
   },
   {
     icon: LinksIcon,
-    label: "Links",
+    label: "Link",
     description: "Link Management Hub",
     color: "lavender",
   },
@@ -39,11 +39,14 @@ const tools = [
   },
 ];
 
-const FlipContainer = ({ frontContent, backContent, color }) => {
+const FlipContainer = ({ frontContent, backContent, color, index }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="flip-container">
+    <div
+      className="flip-container animate-float"
+      style={{ animationDelay: `${index * 0.4}s` }}
+    >
       <div
         className={`relative preserve-3d cursor-pointer bg-${color} rounded-lg ${
           isFlipped ? "animate-flip-forward" : "animate-flip-backward"
@@ -80,8 +83,8 @@ const Dam = () => {
             </span>
           </div>
           <div className="flex flex-col justify-center font-semibold text-right px-8">
-            <h2 className="text-5xl text-black">Organize</h2>
-            <h2 className="text-5xl text-black">Your Assets.</h2>
+            <h2 className="text-4xl text-black">Organize</h2>
+            <h2 className="text-4xl text-black">Your Assets.</h2>
           </div>
         </div>
 
@@ -98,6 +101,7 @@ const Dam = () => {
             <div key={index}>
               <FlipContainer
                 color={tool.color}
+                index={index}
                 frontContent={
                   <>
                     <tool.icon width={24} height={24} />

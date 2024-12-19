@@ -38,6 +38,10 @@ module.exports = {
           "0%": { transform: "perspective(1000px) rotateY(180deg)" },
           "100%": { transform: "perspective(1000px) rotateY(0deg)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         marquee: "marquee 25s linear infinite",
@@ -45,6 +49,7 @@ module.exports = {
         slideFromLeft: "slideFromLeft 0.8s ease-out",
         "flip-forward": "flip 0.6s ease-out forwards",
         "flip-backward": "flipBack 0.6s ease-out forwards",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },
