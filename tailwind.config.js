@@ -51,6 +51,11 @@ module.exports = {
           "50%": { transform: "scale(1)" },
           "100%": { transform: "scale(0.35)" },
         },
+        scale: {
+          "0%": { transform: "scale(0.25)" },
+          "50%": { transform: "scale(1)" },
+          "100%": { transform: "scale(0.25)" },
+        },
         cardSpread: {
           "0%": { transform: "translateX(0)" },
           "50%": { transform: "translateX(10px)" },
@@ -67,6 +72,7 @@ module.exports = {
         "star-spin": "starSpin 4s linear infinite",
         "star-scale": "starScale 4s linear infinite",
         "card-spread": "cardSpread 1.5s ease-in-out infinite",
+        scale: "scale 4s ease-in-out infinite",
       },
     },
   },
