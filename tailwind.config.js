@@ -27,7 +27,7 @@ module.exports = {
           "100%": { transform: "translateX(0%)" },
         },
         slideFromLeft: {
-          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "0%": { transform: "translateX(-100%)", opacity: "1" },
           "100%": { transform: "translateX(-1rem)", opacity: "1" },
         },
         flip: {

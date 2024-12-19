@@ -1,10 +1,10 @@
 import { Fragment, useState } from "react";
 import TextIcon from "../Icons/TextIcon";
-import IconsIcon from "../Icons/IconsIcon";
 import MediaIcon from "../Icons/MediaIcon";
 import LogosIcon from "../Icons/LogosIcon";
 import LinksIcon from "../Icons/LinksIcon";
 import DocumentsIcon from "../Icons/DocumentsIcon";
+import Misc from "../Misc";
 
 const tools = [
   {
@@ -12,30 +12,50 @@ const tools = [
     label: "Text",
     description: "Edit Text Content",
     color: "pink",
+    miscColors: {
+      petalColor: "skyblue",
+      outerCircleColor: "yellow",
+    },
   },
   {
     icon: MediaIcon,
     label: "Media",
     description: "Manage Media Files",
     color: "peach",
+    miscColors: {
+      petalColor: "lavender",
+      outerCircleColor: "skyblue",
+    },
   },
   {
     icon: LogosIcon,
     label: "Logo",
     description: "Brand Logo Storage",
     color: "skyblue",
+    miscColors: {
+      petalColor: "peach",
+      outerCircleColor: "pink",
+    },
   },
   {
     icon: LinksIcon,
     label: "Link",
     description: "Link Management Hub",
     color: "lavender",
+    miscColors: {
+      petalColor: "sage",
+      outerCircleColor: "peach",
+    },
   },
   {
     icon: DocumentsIcon,
     label: "Doc",
     description: "Document Control Center",
     color: "yellow",
+    miscColors: {
+      petalColor: "pink",
+      outerCircleColor: "lavender",
+    },
   },
 ];
 
@@ -53,10 +73,10 @@ const FlipContainer = ({ frontContent, backContent, color, index }) => {
         }`}
         onClick={() => setIsFlipped(!isFlipped)}
       >
-        <div className="flex hover:scale-105 transition-transform flex-col items-center gap-2 bg-inherit border border-black rounded-md p-4 backface-hidden text-black">
+        <div className="flex hover:scale-105 transition-transform flex-col items-center gap-2 bg-inherit border border-black rounded-md backface-hidden text-black">
           {frontContent}
         </div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-inherit border border-black rounded-md p-4 backface-hidden [transform:rotateY(180deg)]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-inherit border border-black text-black rounded-md p-4 backface-hidden [transform:rotateY(180deg)]">
           {backContent}
         </div>
       </div>
@@ -75,10 +95,10 @@ const Dam = () => {
             <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/5 items-center justify-end -translate-x-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
               Digital
             </span>
-            <span className="flex bg-peach border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-peach border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
               Asset
             </span>
-            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-9/10 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:1200ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-9/10 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:1600ms] [animation-fill-mode:forwards]">
               Manager
             </span>
           </div>
@@ -103,17 +123,18 @@ const Dam = () => {
                 color={tool.color}
                 index={index}
                 frontContent={
+                  <Misc
+                    petalColor={tool.miscColors.petalColor}
+                    outerCircleColor={tool.miscColors.outerCircleColor}
+                  />
+                }
+                backContent={
                   <>
                     <tool.icon width={24} height={24} />
                     <span className="text-sm font-medium text-black">
                       {tool.label}
                     </span>
                   </>
-                }
-                backContent={
-                  <p className="text-sm font-medium text-black text-center">
-                    {tool.description}
-                  </p>
                 }
               />
             </div>
