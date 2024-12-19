@@ -76,7 +76,7 @@ const FlipContainer = ({ frontContent, backContent, color, index }) => {
         <div className="flex hover:scale-105 transition-transform flex-col items-center gap-2 bg-inherit border border-black rounded-md backface-hidden text-black">
           {frontContent}
         </div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-inherit border border-black text-black rounded-md p-4 backface-hidden [transform:rotateY(180deg)]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-inherit border border-black text-black rounded-md backface-hidden [transform:rotateY(180deg)]">
           {backContent}
         </div>
       </div>
@@ -90,19 +90,19 @@ const Dam = () => {
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
       <span className="absolute inset-0 w-full h-full bg-sage border border-neutral-900 rounded-xl"></span>
       <div className="flex flex-col absolute inset-0 gap-10 overflow-hidden">
-        <div className="flex gap-6 items-end">
-          <div className="flex flex-col gap-1 w-full text-black font-medium">
-            <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/5 items-center justify-end -translate-x-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
+        <div className="flex gap-6">
+          <div className="flex flex-col gap-1 w-full text-black font-medium self-start pb-12">
+            <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/5 items-center justify-end -translate-x-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105  hover:brightness-110 animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
               Digital
             </span>
-            <span className="flex bg-peach border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-peach border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-700 hover:-translate-x-2 hover:scale-105 hover:brightness-110 animate-slideFromLeft opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
               Asset
             </span>
-            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-9/10 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:1600ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-9/10 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 hover:brightness-110 animate-slideFromLeft opacity-0 [animation-delay:1600ms] [animation-fill-mode:forwards]">
               Manager
             </span>
           </div>
-          <div className="flex flex-col justify-center font-semibold text-right pr-8">
+          <div className="flex flex-col justify-center font-semibold text-right pr-8 self-end">
             <h2 className="text-4xl text-black">Organize</h2>
             <h2 className="text-4xl text-black">Your Assets.</h2>
           </div>
@@ -130,7 +130,7 @@ const Dam = () => {
                 }
                 backContent={
                   <>
-                    <tool.icon width={24} height={24} />
+                    <tool.icon width={30} height={30} />
                     <span className="text-sm font-medium text-black">
                       {tool.label}
                     </span>
