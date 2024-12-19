@@ -23,9 +23,9 @@ const Fifo = () => {
       <span className="absolute inset-0 w-full h-full bg-peach border border-neutral-900 rounded-xl"></span>
       <div className="absolute inset-0 flex flex-col text-black">
         <div className="flex flex-col px-8 py-6 gap-2 text-black">
-          <h1 className="text-3xl font-semibold text-black">
+          <h2 className="text-3xl font-semibold text-black">
             Blogging Platform
-          </h1>
+          </h2>
           <h1 className="text-3xl font-semibold text-black">
             for D2C Insights.
           </h1>

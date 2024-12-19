@@ -7,9 +7,9 @@ const ReviewMate = () => {
       <span className="absolute inset-0 w-full h-full bg-sage border border-neutral-900 rounded-xl"></span>
       <div className="absolute inset-0 flex flex-col text-black overflow-hidden">
         <div className="flex flex-col px-8 py-6 gap-2">
-          <h1 className="text-xl text-black font-semibold">
+          <h2 className="text-xl text-black font-semibold">
             Simplifying Customer Feedback for E-commerce.
-          </h1>
+          </h2>
           <p className="">
             Shopify app for collecting reviews via email and automated
             post-purchase prompts.

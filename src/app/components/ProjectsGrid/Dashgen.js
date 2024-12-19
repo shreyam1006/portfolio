@@ -127,9 +127,9 @@ const Dashgen = () => {
           })}
         </div>
         <div className="flex flex-col px-8 gap-2 my-auto text-black w-2/3">
-          <h1 className="text-3xl text-black font-semibold">
+          <h2 className="text-3xl text-black font-semibold">
             Revolutionizing Multi-Platform AI Integration.
-          </h1>
+          </h2>
           <p>
             Effortlessly Connect Top AI Models Using Your API Keys to Optimize
             Performance at a Low Cost, Ensuring Secure and Efficient

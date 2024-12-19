@@ -10,9 +10,9 @@ const Glue = () => {
           GLUE
         </div>
         <div className="flex flex-col px-8 py-4 gap-2 text-black">
-          <h1 className="text-3xl text-black font-semibold">
+          <h2 className="text-3xl text-black font-semibold">
             Connecting Brands and Fans with Engaging AI.
-          </h1>
+          </h2>
           <p className="text-lg">
             Allows brands to create fan pages featuring AI-generated videos,
             enhancing engagement and fostering loyalty through a gamified
