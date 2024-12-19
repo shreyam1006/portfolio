@@ -9,8 +9,8 @@ const Glue = () => {
         <div className="bg-skyblue w-4/5 py-12 border border-black rounded-tl-xl rounded-br-full">
           GLUE
         </div>
-        <div className="flex flex-col px-8 py-4 gap-2 text-white font-semibold">
-          <h1 className="text-3xl text-black">
+        <div className="flex flex-col px-8 py-4 gap-2 text-black">
+          <h1 className="text-3xl text-black font-semibold">
             Connecting Brands and Fans with Engaging AI.
           </h1>
           <p className="text-lg">

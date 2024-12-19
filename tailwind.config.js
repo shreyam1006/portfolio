@@ -26,10 +26,15 @@ module.exports = {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        slideFromLeft: {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(-1rem)", opacity: "1" },
+        },
       },
       animation: {
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
+        slideFromLeft: "slideFromLeft 0.8s ease-out",
       },
     },
   },
