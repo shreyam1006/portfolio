@@ -17,7 +17,7 @@ const tools = [
     icon: MediaIcon,
     label: "Media",
     description: "Manage Media Files",
-    color: "sage",
+    color: "peach",
   },
   {
     icon: LogosIcon,
@@ -68,28 +68,28 @@ const Dam = () => {
   return (
     <Fragment>
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
-      <span className="absolute inset-0 w-full h-full bg-peach border border-neutral-900 rounded-xl"></span>
+      <span className="absolute inset-0 w-full h-full bg-sage border border-neutral-900 rounded-xl"></span>
       <div className="flex flex-col absolute inset-0 gap-10 overflow-hidden">
         <div className="flex gap-6 items-end">
-          <div className="flex flex-col gap-1 w-1/2 text-black font-medium">
-            <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-3/7 items-center justify-end -translate-x-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
+          <div className="flex flex-col gap-1 w-full text-black font-medium">
+            <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/5 items-center justify-end -translate-x-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
               Digital
             </span>
-            <span className="flex bg-sage border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-peach border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/6 items-center justify-end -translate-x-4 -translate-y-2 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]">
               Asset
             </span>
-            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-5/6 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:1200ms] [animation-fill-mode:forwards]">
+            <span className="flex bg-skyblue border-black border rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-9/10 items-center justify-end -translate-x-4 -translate-y-4 transition-all duration-700 hover:-translate-x-2 hover:scale-105 animate-slideFromLeft opacity-0 [animation-delay:1200ms] [animation-fill-mode:forwards]">
               Manager
             </span>
           </div>
-          <div className="flex flex-col justify-center font-semibold text-right px-8">
+          <div className="flex flex-col justify-center font-semibold text-right pr-8">
             <h2 className="text-4xl text-black">Organize</h2>
             <h2 className="text-4xl text-black">Your Assets.</h2>
           </div>
         </div>
 
         <div className="flex flex-col px-8 gap-2 text-black">
-          <p className="text-xl">
+          <p className="text-xl text-right">
             A software solution that centralizes, organizes, and facilitates the
             storage, retrieval, and sharing of digital assets such as images,
             videos, and documents.
