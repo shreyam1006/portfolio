@@ -14,7 +14,7 @@ function BlackIconWrapper({ icon, ...rest }) {
     <IconWrapper
       icon={icon}
       bgColor="bg-sage"
-      textColor="text-peach"
+      textColor="text-black/30"
       {...rest}
     />
   );
@@ -24,8 +24,8 @@ function RedIconWrapper({ icon, ...rest }) {
   return (
     <IconWrapper
       icon={icon}
-      bgColor="bg-yellow"
-      textColor="text-skyblue"
+      bgColor="bg-skyblue"
+      textColor="text-black/30"
       {...rest}
     />
   );
