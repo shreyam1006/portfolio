@@ -41,6 +41,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
         <animated.div
           style={trails[3]}
           className="group relative w-full h-full"
+          onClick={() => window.open("https://dashgen.in", "_blank")}
         >
           <Dashgen />
         </animated.div>
@@ -90,6 +91,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
         <animated.div
           style={trails[5]}
           className="group relative w-full h-full"
+          onClick={() => window.open("https://glue.is", "_blank")}
         >
           <Glue />
         </animated.div>

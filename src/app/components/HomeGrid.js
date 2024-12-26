@@ -118,7 +118,13 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[5]}
-          className="h-full w-full relative border rounded-2xl border-neutral-900 bg-skyblue"
+          className="h-full w-full relative border rounded-2xl border-neutral-900 bg-skyblue cursor-pointer"
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1-lKlLtRmm7Sufplr0HFrPvXtWMt93XCu/view?usp=sharing",
+              "_blank"
+            )
+          }
         >
           <Resume />
         </animated.div>
