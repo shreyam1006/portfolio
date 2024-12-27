@@ -74,7 +74,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[2]}
-          className="relative h-full w-full border border-neutral-900 bg-peach rounded-2xl"
+          className="relative h-full w-full border border-neutral-900 bg-peach rounded-2xl overflow-clip"
         >
           <Education />
         </animated.div>
