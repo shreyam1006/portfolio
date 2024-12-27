@@ -78,3 +78,11 @@
     transform: translate(227.5px, 169.75px) scale(1, 1);
   }
 }
+
+.slide-section {
+  transition: transform 0.5s ease;
+}
+
+.slide-down {
+  transform: translateY(100vh);
+}
