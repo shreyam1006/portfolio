@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
+import GlueLabsLogo from "../../components/Images/GlueLabs.png";
 import "../../styles/gluelabs.css";
 
 export default function Gluelabs() {
@@ -241,7 +243,7 @@ export default function Gluelabs() {
       icon: icons.fullstack,
       title: "Full Stack Development",
       description: "Built robust features across entire tech stack.",
-      bgColor: "bg-skyblue",
+      bgColor: "bg-pink",
       rotation: "rotate-6",
       translateX: "translate-x-24",
       translateY: "translate-y-0",
@@ -252,28 +254,33 @@ export default function Gluelabs() {
     <div className="h-full flex flex-col">
       {/* Header */}
       <div className="mb-4">
-        <h2 className="text-4xl font-semibold text-black tracking-tight">
-          Software
-        </h2>
-        <h2 className="text-4xl font-semibold text-black tracking-tight mb-8">
-          Development Engineer
-        </h2>
-        <div className="flex items-center justify-between gap-8">
-          {/* Company */}
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-pink rounded-full flex items-center justify-center border border-black">
-              <span className="text-lg font-bold text-white">GL</span>
-            </div>
-            <h3 className="text-xl font-medium text-black">Glue Labs</h3>
+        {/* Date */}
+        <div className="flex justify-between items-center mb-4">
+          <div className="flex items-center gap-2">
+            <Image
+              src={GlueLabsLogo}
+              alt="Glue Labs Logo"
+              width={24}
+              height={24}
+            />
+            <h3 className="text-xl font-semibold text-black">Glue Labs</h3>
           </div>
 
-          {/* Date */}
-          <div className="inline-flex items-center gap-3 px-3 py-1 rounded-xl bg-yellow border border-dashed border-black">
+          <div className="inline-flex items-center gap-3 px-3 py-1 rounded-xl border border-dashed border-black">
             <span className="font-medium text-black">September 2022</span>
             <span className="text-black">-</span>
             <span className="font-medium text-black">Present</span>
           </div>
         </div>
+        <div className="cursor-pointer hover:scale-105 transition-all bg-white w-full px-5 py-2 mb-4 border border-black text-center">
+          <h2 className="font-neutral-900 text-3xl font-bold text-pink">
+            Software
+          </h2>
+          <h2 className="font-neutral-900 text-3xl font-bold text-pink">
+            Development Engineer
+          </h2>
+        </div>
+        {/* Company */}
       </div>
 
       {/* Cards Container */}
@@ -301,12 +308,12 @@ export default function Gluelabs() {
           >
             {/* Folder Tab */}
             <div
-              className={`h-8 w-32 ${card.bgColor} border-2 border-black rounded-t-lg mx-auto -mb-1 z-10`}
+              className={`h-8 w-32 ${card.bgColor} border border-black rounded-t-lg mx-auto -mb-1 z-10`}
             />
 
             {/* Main Folder */}
             <div
-              className={`h-full ${card.bgColor} border-2 border-black rounded-lg p-4 relative`}
+              className={`h-full ${card.bgColor} border border-black rounded-lg p-4 relative`}
             >
               {/* Content */}
               <div className="relative z-10 flex flex-col items-center justify-center h-full">
