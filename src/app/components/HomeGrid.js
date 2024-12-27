@@ -15,7 +15,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
   const name = "Shreya Maheshwari".split("");
 
   const [subheadingIdx, setSubheadingIdx] = useState(0);
-  const subheading = "Software Developer".split("");
+  const subheading = "Software Development Engineer".split("");
 
   useEffect(() => {
     const id = setInterval(() => {
