@@ -1,83 +1,196 @@
 "use client";
 import React, { useState } from "react";
+import "../../styles/gluelabs.css";
 
 export default function Gluelabs() {
   const [selectedCard, setSelectedCard] = useState(null);
 
   const icons = {
     leadership: (
-      <svg
-        className="w-6 h-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-        />
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
+        <g id="leadership_group" transform="translate(50,50) scale(0,0)">
+          {/* Central Leader */}
+          <circle cx="0" cy="0" r="12" fill="#3498DB" stroke="#000" />
+          <path d="M-4,-4 L4,4 M-4,4 L4,-4" stroke="#FFF" strokeWidth="2" />
+
+          {/* Team Members */}
+          <circle cx="-20" cy="15" r="8" fill="#E74C3C" stroke="#000" />
+          <circle cx="20" cy="15" r="8" fill="#2ECC71" stroke="#000" />
+          <circle cx="-20" cy="-15" r="8" fill="#F1C40F" stroke="#000" />
+          <circle cx="20" cy="-15" r="8" fill="#9B59B6" stroke="#000" />
+
+          {/* Connection Lines */}
+          <path
+            d="M0,0 L-20,15 M0,0 L20,15 M0,0 L-20,-15 M0,0 L20,-15"
+            stroke="#000"
+            strokeWidth="1"
+            strokeDasharray="2,2"
+          />
+        </g>
       </svg>
     ),
-    engagement: (
-      <svg
-        className="w-6 h-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
-        />
+    design: (
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
+        <g id="design_group" transform="translate(50,50) scale(0,0)">
+          {/* Color Palette */}
+          <circle cx="-15" cy="-15" r="8" fill="#FF6B6B" stroke="#000" />
+          <circle cx="0" cy="-15" r="8" fill="#4ECDC4" stroke="#000" />
+          <circle cx="15" cy="-15" r="8" fill="#FFD93D" stroke="#000" />
+
+          {/* Design Tools */}
+          <rect
+            x="-20"
+            y="5"
+            width="40"
+            height="25"
+            rx="2"
+            fill="#95A5A6"
+            stroke="#000"
+          />
+          <circle cx="0" cy="17.5" r="8" fill="#E74C3C" stroke="#000" />
+
+          {/* Ruler */}
+          <rect
+            x="-25"
+            y="-5"
+            width="50"
+            height="5"
+            fill="#BDC3C7"
+            stroke="#000"
+          />
+          {[-20, -10, 0, 10, 20].map((x) => (
+            <line
+              key={x}
+              x1={x}
+              y1="-5"
+              x2={x}
+              y2="0"
+              stroke="#000"
+              strokeWidth="1"
+            />
+          ))}
+        </g>
       </svg>
     ),
-    product: (
-      <svg
-        className="w-6 h-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-        />
+    innovation: (
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
+        <g id="innovation_group" transform="translate(50,50) scale(0,0)">
+          {/* Lightbulb */}
+          <path
+            d="M-15,15 Q-15,-15 0,-15 Q15,-15 15,15"
+            fill="#F1C40F"
+            stroke="#000"
+          />
+          <rect
+            x="-10"
+            y="15"
+            width="20"
+            height="10"
+            fill="#BDC3C7"
+            stroke="#000"
+          />
+
+          {/* Sparks */}
+          <path d="M-25,-5 L-15,0 L-25,5" stroke="#E74C3C" strokeWidth="2" />
+          <path d="M25,-5 L15,0 L25,5" stroke="#E74C3C" strokeWidth="2" />
+          <path d="M0,-30 L0,-20" stroke="#E74C3C" strokeWidth="2" />
+
+          {/* Innovation Circles */}
+          <circle cx="-20" cy="-20" r="5" fill="#3498DB" stroke="#000" />
+          <circle cx="20" cy="-20" r="5" fill="#2ECC71" stroke="#000" />
+        </g>
       </svg>
     ),
-    features: (
-      <svg
-        className="w-6 h-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-        />
+    performance: (
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
+        <g id="performance_group" transform="translate(50,50) scale(0,0)">
+          {/* Speedometer Base */}
+          <path
+            d="M-30,10 A30,30 0 0,1 30,10"
+            fill="none"
+            stroke="#E74C3C"
+            strokeWidth="4"
+          />
+
+          {/* Speed Markers */}
+          <circle cx="-25" cy="8" r="3" fill="#3498DB" />
+          <circle cx="-15" cy="0" r="3" fill="#F1C40F" />
+          <circle cx="0" cy="-5" r="3" fill="#2ECC71" />
+          <circle cx="15" cy="0" r="3" fill="#F1C40F" />
+          <circle cx="25" cy="8" r="3" fill="#3498DB" />
+
+          {/* Needle */}
+          <path
+            d="M0,10 L15,-15 L0,-5 L-15,-15 Z"
+            fill="#E74C3C"
+            stroke="#000"
+          />
+
+          {/* Center Point */}
+          <circle cx="0" cy="10" r="5" fill="#2C3E50" stroke="#000" />
+
+          {/* Speed Lines */}
+          <path d="M35,-10 L45,-15" stroke="#3498DB" strokeWidth="2" />
+          <path d="M-35,-10 L-45,-15" stroke="#3498DB" strokeWidth="2" />
+        </g>
       </svg>
     ),
-    development: (
-      <svg
-        className="w-6 h-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-        />
+    fullstack: (
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
+        <g id="fullstack_group" transform="translate(50,50) scale(0,0)">
+          {/* Frontend Layer */}
+          <rect
+            x="-25"
+            y="-25"
+            width="50"
+            height="20"
+            rx="2"
+            fill="#3498DB"
+            stroke="#000"
+          />
+          <text x="-15" y="-12" fill="#FFF" fontSize="12" fontWeight="bold">
+            {"</>"}
+          </text>
+
+          {/* Backend Layer */}
+          <rect
+            x="-25"
+            y="5"
+            width="50"
+            height="20"
+            rx="2"
+            fill="#2ECC71"
+            stroke="#000"
+          />
+          <text x="-15" y="18" fill="#FFF" fontSize="12" fontWeight="bold">
+            {"{}"}
+          </text>
+
+          {/* Connection Lines */}
+          <path
+            d="M-20,-5 L-20,5"
+            stroke="#E74C3C"
+            strokeWidth="2"
+            strokeDasharray="2,2"
+          />
+          <path
+            d="M0,-5 L0,5"
+            stroke="#F1C40F"
+            strokeWidth="2"
+            strokeDasharray="2,2"
+          />
+          <path
+            d="M20,-5 L20,5"
+            stroke="#9B59B6"
+            strokeWidth="2"
+            strokeDasharray="2,2"
+          />
+
+          {/* Stack Dots */}
+          <circle cx="-20" cy="0" r="2" fill="#E74C3C" />
+          <circle cx="0" cy="0" r="2" fill="#F1C40F" />
+          <circle cx="20" cy="0" r="2" fill="#9B59B6" />
+        </g>
       </svg>
     ),
   };
@@ -87,7 +200,7 @@ export default function Gluelabs() {
       id: 1,
       icon: icons.leadership,
       title: "Team Leadership",
-      description: "Led UI development team & product roadmaps.",
+      description: "Managed development teams and technical initiatives.",
       bgColor: "bg-lavender",
       rotation: "-rotate-6",
       translateX: "-translate-x-24",
@@ -95,9 +208,9 @@ export default function Gluelabs() {
     },
     {
       id: 2,
-      icon: icons.engagement,
-      title: "Customer Engagement",
-      description: "Built AI-driven engagement platform with gamified rewards.",
+      icon: icons.design,
+      title: "UI/UX Design",
+      description: "Crafted intuitive user interfaces and experiences.",
       bgColor: "bg-peach",
       rotation: "-rotate-3",
       translateX: "-translate-x-12",
@@ -105,9 +218,9 @@ export default function Gluelabs() {
     },
     {
       id: 3,
-      icon: icons.product,
-      title: "xG Project Impact",
-      description: "AI-powered email marketing for Shopify.",
+      icon: icons.innovation,
+      title: "Innovation Projects",
+      description: "Implemented cutting-edge technology solutions.",
       bgColor: "bg-sage",
       rotation: "rotate-0",
       translateX: "translate-x-0",
@@ -115,9 +228,9 @@ export default function Gluelabs() {
     },
     {
       id: 4,
-      icon: icons.features,
-      title: "Product Development",
-      description: "Led product strategy & UX research initiatives.",
+      icon: icons.performance,
+      title: "Performance Optimization",
+      description: "Enhanced system efficiency and user experience.",
       bgColor: "bg-yellow",
       rotation: "rotate-3",
       translateX: "translate-x-12",
@@ -125,31 +238,15 @@ export default function Gluelabs() {
     },
     {
       id: 5,
-      icon: icons.features,
-      title: "Product Development",
-      description: "Led product strategy & UX research initiatives.",
+      icon: icons.fullstack,
+      title: "Full Stack Development",
+      description: "Built robust features across entire tech stack.",
       bgColor: "bg-skyblue",
       rotation: "rotate-6",
       translateX: "translate-x-24",
       translateY: "translate-y-0",
     },
   ];
-
-  const getCardClasses = (card) => {
-    const baseClasses = `absolute w-48 h-60 p-4 rounded-lg border border-black cursor-pointer transition-all duration-500 ease-in-out ${card.bgColor}`;
-    const transformClasses =
-      selectedCard === null
-        ? `${card.rotation} ${card.translateX} ${card.translateY}`
-        : "";
-    const scaleClasses =
-      selectedCard === card.id ? "z-50 scale-125" : "hover:scale-105";
-    const visibilityClasses =
-      selectedCard !== null && selectedCard !== card.id
-        ? "opacity-0 pointer-events-none"
-        : "";
-
-    return `${baseClasses} ${transformClasses} ${scaleClasses} ${visibilityClasses}`;
-  };
 
   return (
     <div className="h-full flex flex-col">
@@ -187,17 +284,44 @@ export default function Gluelabs() {
             onClick={() =>
               setSelectedCard(selectedCard === card.id ? null : card.id)
             }
-            className={getCardClasses(card)}
+            className={`absolute w-48 h-60 cursor-pointer transition-all duration-700 ease-in-out ${
+              selectedCard === null
+                ? `${card.rotation} ${card.translateX} ${card.translateY}`
+                : ""
+            } ${
+              selectedCard === card.id
+                ? "z-50 scale-125 card-selected transition-transform duration-500 ease-out"
+                : ""
+            } ${
+              selectedCard !== null && selectedCard !== card.id
+                ? "opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out"
+                : ""
+            }`}
             style={{ transformOrigin: "center center" }}
           >
-            <div className="flex flex-col items-center h-full">
-              <div className="text-black mb-3">{card.icon}</div>
-              <h4 className="font-bold text-black text-center mb-3">
-                {card.title}
-              </h4>
-              <p className="text-sm text-black text-center">
-                {card.description}
-              </p>
+            {/* Folder Tab */}
+            <div
+              className={`h-8 w-32 ${card.bgColor} border-2 border-black rounded-t-lg mx-auto -mb-1 z-10`}
+            />
+
+            {/* Main Folder */}
+            <div
+              className={`h-full ${card.bgColor} border-2 border-black rounded-lg p-4 relative`}
+            >
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                <div className="bg-white/50 rounded-lg p-4 w-40 h-48">
+                  <div className="text-black mb-1 flex justify-center">
+                    {card.icon}
+                  </div>
+                  <h4 className="font-bold text-black text-center mb-2">
+                    {card.title}
+                  </h4>
+                  <p className="text-sm text-black text-center">
+                    {card.description}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         ))}
