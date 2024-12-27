@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import GlueLabsLogo from "../../components/Images/GlueLabs.png";
 import "../../styles/gluelabs.css";
+import Puzzle from "../Icons/Puzzle";
 
 export default function Gluelabs() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -251,40 +252,39 @@ export default function Gluelabs() {
   ];
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col items-center">
       {/* Header */}
-      <div className="mb-4">
-        {/* Date */}
-        <div className="flex justify-between items-center mb-4">
-          <div className="flex items-center gap-2">
-            <Image
-              src={GlueLabsLogo}
-              alt="Glue Labs Logo"
-              width={24}
-              height={24}
-            />
-            <h3 className="text-xl font-semibold text-black">Glue Labs</h3>
-          </div>
 
-          <div className="inline-flex items-center gap-3 px-3 py-1 rounded-xl border border-dashed border-black">
-            <span className="font-medium text-black">September 2022</span>
-            <span className="text-black">-</span>
-            <span className="font-medium text-black">Present</span>
-          </div>
+      <div className="flex justify-between items-center mb-4 w-full">
+        <div className="flex items-center gap-2">
+          <Image
+            src={GlueLabsLogo}
+            alt="Glue Labs Logo"
+            width={24}
+            height={24}
+          />
+          <h3 className="text-xl font-semibold text-black">Glue Labs</h3>
         </div>
-        <div className="cursor-pointer hover:scale-105 transition-all bg-white w-full px-5 py-2 mb-4 border border-black text-center">
-          <h2 className="font-neutral-900 text-3xl font-bold text-pink">
-            Software
-          </h2>
-          <h2 className="font-neutral-900 text-3xl font-bold text-pink">
-            Development Engineer
-          </h2>
+
+        <div className="inline-flex items-center gap-3 px-3 py-1 rounded-xl border border-dashed border-black">
+          <span className="font-medium text-black">September 2022</span>
+          <span className="text-black">-</span>
+          <span className="font-medium text-black">Present</span>
         </div>
-        {/* Company */}
+      </div>
+      <div className="cursor-pointer hover:scale-105 transition-all bg-white w-full px-5 py-2 mb-4 border border-black text-center">
+        <h2 className="font-neutral-900 text-3xl font-bold text-pink">
+          Software
+        </h2>
+        <h2 className="font-neutral-900 text-3xl font-bold text-pink">
+          Development Engineer
+        </h2>
       </div>
 
+      <Puzzle width={400} height={400} />
+
       {/* Cards Container */}
-      <div className="relative h-[400px] flex items-center justify-center">
+      <div className="relative h-[380px] flex items-center justify-center">
         {cards.map((card) => (
           <div
             key={card.id}
@@ -297,7 +297,7 @@ export default function Gluelabs() {
                 : ""
             } ${
               selectedCard === card.id
-                ? "z-50 scale-125 card-selected transition-transform duration-500 ease-out"
+                ? "z-50 scale-110 card-selected transition-transform duration-500 ease-out"
                 : ""
             } ${
               selectedCard !== null && selectedCard !== card.id
