@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTrail, animated, easings } from "@react-spring/web";
-import { GRIDS } from "../constants";
+import { GRIDS } from "../../constants";
+import { Gluelabs, UST, GluelabsIntern } from "./index";
 
 export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
   const [nameIdx, setNameIdx] = useState(0);
@@ -44,13 +45,15 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         className="md:col-span-1 lg:col-span-4 lg:row-span-6 h-[200px] md:h-auto"
       >
         <animated.div
-          style={trails[1]}
           className="w-full h-full bg-pink rounded-2xl p-8 border border-black"
-        ></animated.div>
+          style={trails[1]}
+        >
+          <Gluelabs />
+        </animated.div>
       </animated.div>
 
       {/* Top right section split into two */}
-      <div className="md:col-span-1 lg:col-span-8 lg:row-span-3 h-[200px] md:h-auto grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
+      <div className="md:col-span-1 lg:col-span-8 lg:row-span-4 h-[200px] md:h-auto grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
         {/* Work Experience heading */}
         <animated.div
           style={animatedStyles}
@@ -79,21 +82,25 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         {/* Second block */}
         <animated.div style={animatedStyles} className="col-span-1">
           <animated.div
-            style={trails[2]}
             className="w-full h-full bg-peach rounded-2xl p-8 border border-black"
-          ></animated.div>
+            style={trails[2]}
+          >
+            <UST />
+          </animated.div>
         </animated.div>
       </div>
 
       {/* Bottom section */}
       <animated.div
         style={animatedStyles}
-        className="md:col-span-1 lg:col-span-8 lg:row-span-3 h-[200px] md:h-auto"
+        className="md:col-span-1 lg:col-span-8 lg:row-span-2 h-[200px] md:h-auto"
       >
         <animated.div
-          style={trails[3]}
           className="w-full h-full bg-yellow rounded-2xl p-8 border border-black"
-        ></animated.div>
+          style={trails[3]}
+        >
+          <GluelabsIntern />
+        </animated.div>
       </animated.div>
     </animated.div>
   );
