@@ -10,7 +10,7 @@ export default function GluelabsIntern() {
 
   const icons = {
     optimization: (
-      <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
         <g id="optimization_group" transform="translate(50,50) scale(1,1)">
           {/* Loading Bar */}
           <rect
@@ -45,7 +45,7 @@ export default function GluelabsIntern() {
       </svg>
     ),
     userExperience: (
-      <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
         <g id="ux_group" transform="translate(50,50) scale(1,1)">
           {/* User Icon */}
           <circle cx="0" cy="-15" r="10" fill="#3498DB" stroke="#000" />
@@ -80,7 +80,7 @@ export default function GluelabsIntern() {
       </svg>
     ),
     interface: (
-      <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
         <g id="interface_group" transform="translate(50,50) scale(1,1)">
           {/* Window Frame */}
           <rect
@@ -113,7 +113,7 @@ export default function GluelabsIntern() {
       </svg>
     ),
     collaboration: (
-      <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+      <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
         <g id="collaboration_group" transform="translate(50,50) scale(1,1)">
           {/* Team Members */}
           <circle cx="-20" cy="-20" r="8" fill="#3498DB" stroke="#000" />
@@ -181,7 +181,7 @@ export default function GluelabsIntern() {
 
   return (
     <div className="h-full w-full flex justify-between">
-      <div className="flex flex-col items-center justify-between w-1/3">
+      <div className="flex flex-col items-center w-1/3">
         {/* Header */}
         <div className="flex justify-between items-center mb-4 w-full">
           <div className="flex items-center gap-2">
@@ -209,13 +209,13 @@ export default function GluelabsIntern() {
           </h2>
         </div>
       </div>
-      <div className="h-full flex items-center  w-2/3">
+      <div className="h-full flex items-center w-2/3 ml-6">
         <div className="flex flex-wrap gap-6 justify-center items-center max-w-[800px]">
           {cards.map((card) => (
             <div
               key={card.id}
-              className={`w-[250px] h-[100px] ${card.bgColor} ${card.rotation}
-              transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 border border-black px-4 py-2`}
+              className={`w-[250px] h-[140px] ${card.bgColor} ${card.rotation}
+              transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 border border-black px-4 py-2 rounded-lg`}
               onClick={() =>
                 setSelectedCard(card.id === selectedCard ? null : card.id)
               }
@@ -223,11 +223,11 @@ export default function GluelabsIntern() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between">
                   {card.icon}
-                  <h3 className="text font-semibold text-black">
+                  <h3 className="text-lg font-semibold text-black">
                     {card.title}
                   </h3>
                 </div>
-                <p className="text-sm text-black">{card.description}</p>
+                <p className="text-black">{card.description}</p>
               </div>
             </div>
           ))}

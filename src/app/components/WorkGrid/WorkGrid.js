@@ -53,7 +53,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       </animated.div>
 
       {/* Top right section split into two */}
-      <div className="md:col-span-1 lg:col-span-8 lg:row-span-4 h-[200px] md:h-auto grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
+      <div className="md:col-span-1 lg:col-span-8 lg:row-span-3 h-[200px] md:h-auto grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
         {/* Work Experience heading */}
         <animated.div
           style={animatedStyles}
@@ -93,7 +93,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
       {/* Bottom section */}
       <animated.div
         style={animatedStyles}
-        className="md:col-span-1 lg:col-span-8 lg:row-span-2 h-[200px] md:h-auto"
+        className="md:col-span-1 lg:col-span-8 lg:row-span-3 h-[200px] md:h-auto"
       >
         <animated.div
           className="w-full h-full bg-yellow rounded-2xl p-8 border border-black"
