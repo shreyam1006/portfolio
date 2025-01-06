@@ -1,14 +1,8 @@
-import { Fragment, useState } from "react";
 import "../styles/education.css";
 
 export default function Education() {
-  const [isClicked, setIsClicked] = useState(false);
-
   return (
-    <div
-      className="flex flex-row items-center justify-center lg:block overflow-hidden"
-      onClick={() => setIsClicked(!isClicked)}
-    >
+    <div className="flex flex-row items-center justify-center lg:block overflow-hidden">
       <svg
         className="w-full lg:absolute -bottom-1"
         id="eUbxc2KBHAG1"
