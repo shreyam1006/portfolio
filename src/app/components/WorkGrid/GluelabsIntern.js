@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Image from "next/image";
 import GlueLabsLogo from "../../components/Images/GlueLabs.png";
 import "../../styles/gluelabs.css";
@@ -7,6 +7,54 @@ import Design from "../Images/Laptop.gif";
 
 export default function GluelabsIntern() {
   const [selectedCard, setSelectedCard] = useState(null);
+  const [circleAngles, setCircleAngles] = useState([0, 120, 240]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCircleAngles((prev) => [
+        (prev[0] + 0.5) % 360,
+        (prev[1] + 0.4) % 360,
+        (prev[2] + 0.6) % 360,
+      ]);
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [isMobile]);
+
+  const baseEllipseA = isMobile ? 80 : 120;
+  const baseEllipseB = isMobile ? 50 : 75;
+  const centerX = "50%";
+  const centerY = "38%"; // Moved up from 50% to 35%
+  const rotationAngle = 15;
+
+  const ellipses = [
+    {
+      a: baseEllipseA * 0.8,
+      b: baseEllipseB * 0.8,
+      color: "#F480A3", // pink
+    },
+    {
+      a: baseEllipseA,
+      b: baseEllipseB,
+      color: "#C8D98E", // sage
+    },
+    {
+      a: baseEllipseA * 1.2,
+      b: baseEllipseB * 1.2,
+      color: "#C6B1EA", // lavender
+    },
+  ];
 
   const icons = {
     optimization: (
@@ -209,13 +257,67 @@ export default function GluelabsIntern() {
           </h2>
         </div>
 
-        <Image
-          src={Design}
-          alt="Work Logo"
-          width={250}
-          height={250}
-          className="object-contain rounded-lg -mt-[38px]"
-        />
+        <div className="relative">
+          <Image
+            src={Design}
+            alt="Work Logo"
+            width={250}
+            height={250}
+            className="object-contain rounded-lg -mt-[38px] relative z-10"
+          />
+          {ellipses.map((ellipse, index) => {
+            const x =
+              Math.cos((circleAngles[index] * Math.PI) / 180) * ellipse.a;
+            const y =
+              Math.sin((circleAngles[index] * Math.PI) / 180) * ellipse.b;
+
+            return (
+              <Fragment key={index}>
+                {/* Elliptical path */}
+                <svg
+                  className="absolute"
+                  style={{
+                    left: centerX,
+                    top: centerY,
+                    transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`,
+                    width: `${ellipse.a * 2}px`,
+                    height: `${ellipse.b * 2}px`,
+                  }}
+                >
+                  <ellipse
+                    cx={ellipse.a}
+                    cy={ellipse.b}
+                    rx={ellipse.a}
+                    ry={ellipse.b}
+                    fill="none"
+                    stroke="black"
+                    strokeWidth="1"
+                    opacity="0.15"
+                  />
+                </svg>
+
+                {/* Moving circle */}
+                <div
+                  className="absolute"
+                  style={{
+                    left: centerX,
+                    top: centerY,
+                    transform: `translate(-50%, -50%) rotate(${rotationAngle}deg) translate(${x}px, ${y}px)`,
+                  }}
+                >
+                  <div
+                    className="w-3 h-3 rounded-full border border-black"
+                    style={{
+                      backgroundColor: ellipse.color,
+                      opacity: 0.8,
+                      transform: `rotate(-${rotationAngle}deg)`,
+                    }}
+                  ></div>
+                </div>
+              </Fragment>
+            );
+          })}
+        </div>
       </div>
       <div className="h-full flex items-center w-2/3 ml-6">
         <div className="flex flex-wrap gap-6 justify-center items-center">
