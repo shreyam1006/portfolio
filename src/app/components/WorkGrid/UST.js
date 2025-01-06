@@ -13,7 +13,7 @@ const MLIcon = ({ width, height }) => (
     {/* Brain container */}
     <path
       d="M24 6C34 6 42 14 42 24C42 34 34 42 24 42C14 42 6 34 6 24C6 14 14 6 24 6Z"
-      fill="#C6B1EA"
+      fill="#FFDF70"
       stroke="#2D3748"
       strokeWidth="1"
     />
@@ -29,7 +29,7 @@ const MLIcon = ({ width, height }) => (
       cx="16"
       cy="20"
       r="3"
-      fill="#FFDF70"
+      fill="#C6B1EA"
       stroke="#2D3748"
       strokeWidth="1"
     />
@@ -175,7 +175,7 @@ export default function UST() {
       title: "Project Overview",
       description:
         "Developed ML models for MBTI personality prediction using text data with 85% accuracy target.",
-      bgColor: "bg-sage",
+      bgColor: "bg-peach",
     },
     {
       id: 2,

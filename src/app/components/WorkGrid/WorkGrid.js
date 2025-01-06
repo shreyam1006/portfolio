@@ -82,7 +82,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         {/* Second block */}
         <animated.div style={animatedStyles} className="col-span-1">
           <animated.div
-            className="w-full h-full bg-peach rounded-2xl p-8 border border-black"
+            className="w-full h-full bg-sage rounded-2xl p-8 border border-black"
             style={trails[2]}
           >
             <UST />
