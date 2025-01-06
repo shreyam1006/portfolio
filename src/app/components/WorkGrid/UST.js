@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import USTLogo from "../Images/UST.png";
+import Image from "next/image";
 
 const MLIcon = ({ width, height }) => (
   <svg width={width} height={height} viewBox="0 0 48 48" fill="none">
@@ -184,8 +186,15 @@ export default function UST() {
       {/* Header */}
       <div className="flex justify-between items-center mb-4 w-full">
         <div className="flex items-center gap-2">
+          <Image
+            src={USTLogo}
+            alt="UST Logo"
+            width={40}
+            height={40}
+            className="object-contain rounded-lg"
+          />
           <h3 className="text-xl font-semibold text-black">
-            UST Software India(P) Ltd.
+            UST Software India
           </h3>
         </div>
 
