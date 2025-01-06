@@ -15,7 +15,7 @@ export default function Education() {
     degree: "Bachelors of Technology",
     major: "Computer Science",
     university: "Bennett University",
-    year: "2018-2022",
+    year: "2018 - 2022",
     cgpa: "CGPA: 8.1",
   };
 
@@ -348,8 +348,14 @@ export default function Education() {
                   )}
               </i>
             </div>
-            <div className="flex flex-col items-start space-y-1 mt-3">
-              <i className="text-base text-gray-600">
+            <div className="flex flex-col items-start space-y-1 mt-1">
+              <i
+                className={`text-base text-gray-600 ${
+                  indices.cgpa >= 1
+                    ? "border border-dotted rounded-md border-black"
+                    : ""
+                } px-1`}
+              >
                 {texts.year.slice(0, indices.year)}
                 {indices.year < texts.year.length &&
                   indices.university === texts.university.length && (
