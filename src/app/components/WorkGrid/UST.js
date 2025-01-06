@@ -48,12 +48,8 @@ const MLIcon = ({ width, height }) => (
 const AnalyticsIcon = ({ width, height }) => (
   <svg width={width} height={height} viewBox="0 0 48 48" fill="none">
     {/* Background */}
-    <rect
-      x="6"
-      y="6"
-      width="36"
-      height="36"
-      rx="4"
+    <path
+      d="M24 6C34 6 42 14 42 24C42 34 34 42 24 42C14 42 6 34 6 24C6 14 14 6 24 6Z"
       fill="#F480A3"
       stroke="#2D3748"
       strokeWidth="1"
@@ -215,15 +211,40 @@ export default function UST() {
             key={card.id}
             bgColor={card.bgColor}
             frontContent={
-              <div className="flex flex-col items-center justify-center h-full w-full p-6">
-                <h4 className="font-bold text-black text-center text-lg mb-4">
-                  {card.title}
-                </h4>
-                {card.id === 1 ? (
-                  <MLIcon width={50} height={50} />
-                ) : (
-                  <AnalyticsIcon width={50} height={50} />
-                )}
+              <div className="flex flex-col items-center justify-center h-full w-full p-63relative">
+                <div className="relative w-full h-full">
+                  <svg width="100%" height="100%" viewBox="0 0 160 160">
+                    <defs>
+                      <path
+                        id={`curve-${card.id}`}
+                        d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"
+                        fill="none"
+                      />
+                    </defs>
+                    <g>
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="360 80 80"
+                        to="0 80 80"
+                        dur="15s"
+                        repeatCount="indefinite"
+                      />
+                      <text className="font-semibold text-black text-[17px]">
+                        <textPath href={`#curve-${card.id}`} startOffset="0%">
+                          {`${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} •`}
+                        </textPath>
+                      </text>
+                    </g>
+                    <g transform="translate(35, 35)">
+                      {card.id === 1 ? (
+                        <MLIcon width={90} height={90} />
+                      ) : (
+                        <AnalyticsIcon width={90} height={90} />
+                      )}
+                    </g>
+                  </svg>
+                </div>
               </div>
             }
             backContent={
