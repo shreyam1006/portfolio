@@ -1,6 +1,6 @@
-import "../styles/blog.css";
+import "../styles/about.css";
 
-export default function Blog() {
+export default function About() {
   return (
     <div className="flex flex-col-reverse items-center justify-center lg:block">
       <svg

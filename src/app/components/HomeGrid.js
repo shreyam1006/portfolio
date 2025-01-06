@@ -5,7 +5,7 @@ import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
 import Education from "./Education";
 import Resume from "./Resume";
-import Blog from "./Blog";
+import About from "./About";
 import Contact from "./Contact";
 import Misc from "./Misc";
 import { GRIDS } from "../constants";
@@ -108,8 +108,9 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
         <animated.div
           style={trails[4]}
           className="h-full w-full relative border rounded-2xl border-neutral-900 bg-skyblue"
+          onClick={() => setCurrentGrid(GRIDS[3])}
         >
-          <Blog />
+          <About />
         </animated.div>
       </animated.div>
       <animated.div

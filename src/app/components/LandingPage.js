@@ -1,4 +1,4 @@
-import "../styles/blog.css";
+import "../styles/about.css";
 
 export default function LandingPage() {
   return (
