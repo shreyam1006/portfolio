@@ -79,26 +79,6 @@
   }
 }
 
-.section-enter {
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: none;
-}
-
-.section-enter.active {
-  animation: fadeIn 0.3s ease-out forwards;
-}
-
-.section-exit {
-  opacity: 1;
-  transform: translateY(0);
-  animation: none;
-}
-
-.section-exit.inactive {
-  animation: fadeOut 0.3s ease-out forwards;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;

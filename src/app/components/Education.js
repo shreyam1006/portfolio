@@ -15,66 +15,7 @@ export default function Education() {
         viewBox="0 0 455 256"
         cached="false"
       >
-        <g className={`section-enter ${isClicked ? "active" : ""}`}>
-          <rect
-            width="250"
-            height="130"
-            rx="0"
-            ry="0"
-            transform="translate(129 100)"
-            fill="#C8D98E"
-            stroke="#000"
-          />
-          <rect
-            width="230"
-            height="110"
-            rx="0"
-            ry="0"
-            transform="translate(140 108)"
-            fill="#f480a3"
-            stroke="#000"
-          />
-          <text
-            transform="translate(255 135)"
-            font-family="GeistVF"
-            font-size="16"
-            font-weight="bold"
-            fill="#000"
-            text-anchor="middle"
-          >
-            Bachelor of Technology
-          </text>
-          <text
-            transform="translate(255 155)"
-            font-family="GeistVF"
-            font-size="16"
-            font-weight="bold"
-            fill="#000"
-            text-anchor="middle"
-          >
-            Computer Science
-          </text>
-          <text
-            transform="translate(255 175)"
-            font-family="GeistVF"
-            font-size="16"
-            fill="#000"
-            text-anchor="middle"
-          >
-            Bennett University
-          </text>
-          <text
-            transform="translate(255 195)"
-            font-family="GeistVF"
-            font-size="16"
-            fill="#000"
-            text-anchor="middle"
-          >
-            2018 - 2022
-          </text>
-        </g>
-
-        <g className={`section-exit ${!isClicked ? "" : "inactive"}`}>
+        <g>
           <path
             d="M88.940698,237.042395c-.645567-33.140293-9.037246-59.697494-19.647416-62.178308s-20.176425,19.877561-22.397446,52.347599c-4.17191-4.742808-8.838797-2.121739-12.218951,6.862543s-4.951754,22.944805-4.114799,36.55176c.1551,2.3714.826457,4.068421,1.60205,4.049582h66.543249c.447953.003928.876653-.567965,1.18526-1.58116s.469877-2.378245.445878-3.774062c-.181238-10.375307-1.713925-32.277954-11.397825-32.277954Z"
             transform="translate(17.665026-18.645492)"
@@ -166,7 +107,7 @@ export default function Education() {
           </g>
         </g>
 
-        <g className={`section-exit ${!isClicked ? "" : "inactive"}`}>
+        <g>
           <rect
             width="100"
             height="120"
