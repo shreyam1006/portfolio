@@ -2,13 +2,18 @@
 import React, { useState } from "react";
 import USTLogo from "../Images/UST.png";
 import Image from "next/image";
+import DuckSticker1 from "../Images/1.gif";
+import DuckSticker2 from "../Images/2.gif";
+import DuckSticker3 from "../Images/3.gif";
+import DuckSticker4 from "../Images/4.gif";
+import DuckSticker5 from "../Images/5.gif";
 
 const MLIcon = ({ width, height }) => (
   <svg width={width} height={height} viewBox="0 0 48 48" fill="none">
     {/* Brain container */}
     <path
       d="M24 6C34 6 42 14 42 24C42 34 34 42 24 42C14 42 6 34 6 24C6 14 14 6 24 6Z"
-      fill="#C8D98E"
+      fill="#C6B1EA"
       stroke="#2D3748"
       strokeWidth="1"
     />
@@ -170,7 +175,7 @@ export default function UST() {
       title: "Project Overview",
       description:
         "Developed ML models for MBTI personality prediction using text data with 85% accuracy target.",
-      bgColor: "bg-yellow",
+      bgColor: "bg-sage",
     },
     {
       id: 2,
@@ -206,15 +211,61 @@ export default function UST() {
       </div>
       <div className="cursor-pointer hover:scale-105 transition-all bg-white w-full px-5 py-2 mb-4 border border-black text-center">
         <h2 className="font-neutral-900 text-3xl font-bold text-pink">
-          Summer Project
-        </h2>
-        <h2 className="font-neutral-900 text-3xl font-bold text-pink">
-          Intern
+          Summer Project Intern
         </h2>
       </div>
 
+      {/* Duck Stickers */}
+      <div className="flex justify-center gap-8 w-full">
+        <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
+          <Image
+            src={DuckSticker5}
+            alt="Duck Sticker 1"
+            width={36}
+            height={36}
+            className="object-contain rounded-full"
+          />
+        </div>
+        <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
+          <Image
+            src={DuckSticker2}
+            alt="Duck Sticker 2"
+            width={36}
+            height={36}
+            className="object-contain rounded-full"
+          />
+        </div>
+        <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
+          <Image
+            src={DuckSticker3}
+            alt="Duck Sticker 3"
+            width={36}
+            height={36}
+            className="object-contain rounded-full"
+          />
+        </div>
+        <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
+          <Image
+            src={DuckSticker4}
+            alt="Duck Sticker 4"
+            width={36}
+            height={36}
+            className="object-contain rounded-full"
+          />
+        </div>
+        <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
+          <Image
+            src={DuckSticker1}
+            alt="Duck Sticker 5"
+            width={36}
+            height={36}
+            className="object-contain rounded-full"
+          />
+        </div>
+      </div>
+
       {/* Cards Container */}
-      <div className="grid grid-cols-2 gap-6 w-full mt-8 px-4">
+      <div className="grid grid-cols-2 gap-6 w-full mt-4 px-4">
         {cards.map((card) => (
           <FlipContainer
             key={card.id}
