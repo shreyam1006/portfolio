@@ -18,6 +18,19 @@ module.exports = {
         skyblue: "#B6CDDC",
       },
       keyframes: {
+        pulse: {
+          "0%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(1.5)", opacity: "0.5" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        flipForward: {
+          "0%": { transform: "rotateY(0deg)" },
+          "100%": { transform: "rotateY(180deg)" },
+        },
+        flipBackward: {
+          "0%": { transform: "rotateY(180deg)" },
+          "100%": { transform: "rotateY(0deg)" },
+        },
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
@@ -67,6 +80,9 @@ module.exports = {
         },
       },
       animation: {
+        pulse: "pulse 2s infinite",
+        "flip-forward": "flipForward 0.6s forwards",
+        "flip-backward": "flipBackward 0.6s forwards",
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
         slideFromLeft: "slideFromLeft 0.8s ease-out",

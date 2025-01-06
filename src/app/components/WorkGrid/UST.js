@@ -102,7 +102,7 @@ const FlipContainer = ({ frontContent, backContent, bgColor }) => {
   return (
     <div className="flip-container">
       <div
-        className={`relative h-40 preserve-3d cursor-pointer ${bgColor} rounded-lg ${
+        className={`relative h-40 preserve-3d cursor-pointer transition-transform duration-600 ${bgColor} rounded-lg ${
           isFlipped ? "animate-flip-forward" : "animate-flip-backward"
         }`}
         onClick={handleFlip}
@@ -114,54 +114,6 @@ const FlipContainer = ({ frontContent, backContent, bgColor }) => {
           {backContent}
         </div>
       </div>
-      <style jsx>{`
-        .preserve-3d {
-          transform-style: preserve-3d;
-          transition: transform 0.6s;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        @keyframes flipForward {
-          from {
-            transform: rotateY(0deg);
-          }
-          to {
-            transform: rotateY(180deg);
-          }
-        }
-        @keyframes flipBackward {
-          from {
-            transform: rotateY(180deg);
-          }
-          to {
-            transform: rotateY(0deg);
-          }
-        }
-        .animate-flip-forward {
-          animation: flipForward 0.6s forwards;
-        }
-        .animate-flip-backward {
-          animation: flipBackward 0.6s forwards;
-        }
-        @keyframes pulse {
-          0% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.5);
-            opacity: 0.5;
-          }
-          100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-        }
-        .pulse-circle {
-          animation: pulse 2s infinite;
-        }
-      `}</style>
     </div>
   );
 };
@@ -285,8 +237,8 @@ export default function UST() {
                       <animateTransform
                         attributeName="transform"
                         type="rotate"
-                        from="360 80 80"
-                        to="0 80 80"
+                        from="0 80 80"
+                        to="-360 80 80"
                         dur="15s"
                         repeatCount="indefinite"
                       />
