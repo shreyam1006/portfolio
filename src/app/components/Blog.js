@@ -374,9 +374,7 @@ export default function Blog() {
       </svg>
 
       <div className="hover:scale-105 transition-all cursor-pointer lg:absolute bg-yellow w-fit px-5 py-2 m-3 border border-black">
-        <h2 className="font-neutral-900 text-3xl font-bold text-pink">
-          Skills
-        </h2>
+        <h2 className="font-neutral-900 text-3xl font-bold text-pink">About</h2>
       </div>
     </div>
   );

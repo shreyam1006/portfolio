@@ -38,7 +38,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
   });
 
   return (
-    <animated.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-6 w-full min-h-screen lg:h-screen p-3 sm:p-4 lg:p-5 gap-3 sm:gap-4 lg:gap-5 bg-white">
+    <animated.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-6 w-full min-h-screen lg:h-screen p-3 sm:p-4 lg:p-5 gap-3 sm:gap-4 lg:gap-5 bg-stone-200">
       {/* Left section */}
       <animated.div
         style={animatedStyles}
