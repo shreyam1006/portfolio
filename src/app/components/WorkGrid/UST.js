@@ -158,10 +158,10 @@ export default function UST() {
                         dur="15s"
                         repeatCount="indefinite"
                       />
-                      <text className="font-semibold text-black text-[17px]">
+                      <text className="font-semibold text-black text-[16.5px]">
                         <textPath href={`#curve-${card.id}`} startOffset="0%">
                           &nbsp;
-                          {` • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} •`}
+                          {`• ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} • ${card.title} •`}
                         </textPath>
                       </text>
                     </g>

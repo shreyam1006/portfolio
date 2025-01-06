@@ -210,7 +210,7 @@ export default function GluelabsIntern() {
         </div>
       </div>
       <div className="h-full flex items-center w-2/3 ml-6">
-        <div className="flex flex-wrap gap-6 justify-center items-center max-w-[800px]">
+        <div className="flex flex-wrap gap-6 justify-center items-center">
           {cards.map((card) => (
             <div
               key={card.id}
