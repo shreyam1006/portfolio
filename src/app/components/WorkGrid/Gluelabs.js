@@ -234,7 +234,7 @@ export default function Gluelabs() {
       icon: icons.performance,
       title: "Performance Optimization",
       description: "Enhanced system efficiency and user experience.",
-      bgColor: "bg-yellow",
+      bgColor: "bg-skyblue",
       rotation: "rotate-3",
       translateX: "translate-x-12",
       translateY: "translate-y-0",
@@ -295,7 +295,7 @@ export default function Gluelabs() {
             >
               <path
                 d="M25,0 L30,16.67 41.67,11.67 35,25 50,30 35,35 41.67,48.33 30,43.33 25,60 20,43.33 8.33,48.33 15,35 0,30 15,25 8.33,11.67 20,16.67 25,0Z"
-                fill="#FFDF70"
+                fill="#B6CDDC"
                 stroke="#000"
                 transform="translate(20, 50) scale(1)"
               />

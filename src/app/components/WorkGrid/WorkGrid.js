@@ -45,7 +45,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         className="md:col-span-1 lg:col-span-4 lg:row-span-6 h-[200px] md:h-auto"
       >
         <animated.div
-          className="w-full h-full bg-skyblue rounded-2xl p-8 border border-black"
+          className="w-full h-full bg-yellow rounded-2xl p-8 border border-black"
           style={trails[1]}
         >
           <Gluelabs />
@@ -96,7 +96,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         className="md:col-span-1 lg:col-span-8 lg:row-span-3 h-[200px] md:h-auto"
       >
         <animated.div
-          className="w-full h-full bg-yellow rounded-2xl p-8 border border-black"
+          className="w-full h-full bg-skyblue rounded-2xl p-8 border border-black"
           style={trails[3]}
         >
           <GluelabsIntern />

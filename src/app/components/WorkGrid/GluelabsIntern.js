@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import GlueLabsLogo from "../../components/Images/GlueLabs.png";
 import "../../styles/gluelabs.css";
-import Puzzle from "../Icons/Puzzle";
+import Design from "../Images/Laptop.gif";
 
 export default function GluelabsIntern() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -148,7 +148,7 @@ export default function GluelabsIntern() {
       description:
         "Implemented efficient image handling and optimization techniques.",
       bgColor: "bg-lavender",
-      rotation: "rotate-0",
+      rotation: "-rotate-2",
     },
     {
       id: 2,
@@ -156,8 +156,8 @@ export default function GluelabsIntern() {
       title: "User Experience",
       description:
         "Improved user experience through intuitive design solutions.",
-      bgColor: "bg-peach",
-      rotation: "rotate-0",
+      bgColor: "bg-yellow",
+      rotation: "rotate-1",
     },
     {
       id: 3,
@@ -166,7 +166,7 @@ export default function GluelabsIntern() {
       description:
         "Redesigned interfaces to enhance user interaction and feedback.",
       bgColor: "bg-sage",
-      rotation: "rotate-0",
+      rotation: "-rotate-1",
     },
     {
       id: 4,
@@ -174,8 +174,8 @@ export default function GluelabsIntern() {
       title: "Team Collaboration",
       description:
         "Fostered effective team collaboration and code quality practices.",
-      bgColor: "bg-skyblue",
-      rotation: "rotate-0",
+      bgColor: "bg-peach",
+      rotation: "rotate-2",
     },
   ];
 
@@ -208,26 +208,38 @@ export default function GluelabsIntern() {
             Engineer Intern
           </h2>
         </div>
+
+        <Image
+          src={Design}
+          alt="Work Logo"
+          width={250}
+          height={250}
+          className="object-contain rounded-lg -mt-[38px]"
+        />
       </div>
       <div className="h-full flex items-center w-2/3 ml-6">
         <div className="flex flex-wrap gap-6 justify-center items-center">
           {cards.map((card) => (
             <div
               key={card.id}
-              className={`w-[250px] h-[140px] ${card.bgColor} ${card.rotation}
-              transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 border border-black px-4 py-2 rounded-lg`}
+              className={`w-[250px] h-[160px] ${card.bgColor} ${card.rotation}
+              transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 
+              shadow-lg relative before:content-[''] before:w-4 before:h-4 
+              before:bg-white before:border before:border-black before:absolute before:top-2 before:left-1/2 
+              before:-translate-x-1/2 before:rounded-full before:shadow-sm  border border-black
+              px-4 py-2`}
               onClick={() =>
                 setSelectedCard(card.id === selectedCard ? null : card.id)
               }
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-4">
                   {card.icon}
                   <h3 className="text-lg font-semibold text-black">
                     {card.title}
                   </h3>
                 </div>
-                <p className="text-black">{card.description}</p>
+                <p className="text-black mt-2">{card.description}</p>
               </div>
             </div>
           ))}
