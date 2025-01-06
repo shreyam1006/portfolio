@@ -102,12 +102,12 @@ const FlipContainer = ({ frontContent, backContent, bgColor }) => {
   return (
     <div className="flip-container">
       <div
-        className={`relative h-40 preserve-3d cursor-pointer transition-transform duration-600 ${bgColor} rounded-lg ${
+        className={`relative h-40 preserve-3d cursor-pointer ${bgColor} rounded-lg transition-all duration-600 ${
           isFlipped ? "animate-flip-forward" : "animate-flip-backward"
         }`}
         onClick={handleFlip}
       >
-        <div className="h-40 flex hover:scale-105 transition-transform flex-col items-center gap-2 bg-inherit border border-black rounded-md backface-hidden text-black">
+        <div className="h-40 flex hover:scale-105 transition-all duration-300 flex-col items-center gap-2 bg-inherit border border-black rounded-md backface-hidden text-black">
           {frontContent}
         </div>
         <div className="h-40 absolute inset-0 flex flex-col items-center justify-center gap-2 bg-inherit border border-black text-black rounded-md backface-hidden [transform:rotateY(180deg)]">
