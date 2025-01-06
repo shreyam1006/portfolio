@@ -316,11 +316,11 @@ export default function Education() {
       >
         <h2 className="font-neutral-900 text-3xl font-bold">Education</h2>
         <div
-          className={`mt-4 space-y-2
+          className={`mt-4 space-y-2 transition-all duration-500 ease-in-out overflow-hidden
             ${
               isActive
-                ? "opacity-100 border border-black p-3 bg-pink"
-                : "opacity-0 hidden"
+                ? "opacity-100 max-h-[200px] border border-black p-3 bg-pink"
+                : "opacity-0 max-h-0 hidden"
             }`}
         >
           <div className="border border-black p-2 bg-white h-[135px] w-[370px]">
