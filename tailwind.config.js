@@ -18,6 +18,20 @@ module.exports = {
         skyblue: "#B6CDDC",
       },
       keyframes: {
+        flyAway: {
+          "0%": {
+            transform: "translateY(0) rotateX(0)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(-1000px) rotateX(60deg)",
+            opacity: "0",
+          },
+        },
+        showBottom: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-50%)" },
+        },
         pulse: {
           "0%": { transform: "scale(1)", opacity: "1" },
           "50%": { transform: "scale(1.5)", opacity: "0.5" },
@@ -80,6 +94,8 @@ module.exports = {
         },
       },
       animation: {
+        "card-fly": "flyAway 1s ease-in forwards",
+        "card-show": "showBottom 0.5s ease-out forwards",
         pulse: "pulse 2s infinite",
         "flip-forward": "flipForward 0.6s forwards",
         "flip-backward": "flipBackward 0.6s forwards",
@@ -111,6 +127,9 @@ module.exports = {
         },
         ".flip-container": {
           perspective: "1000px",
+        },
+        ".rotate-x-90": {
+          transform: "rotateX(90deg)",
         },
       });
     },

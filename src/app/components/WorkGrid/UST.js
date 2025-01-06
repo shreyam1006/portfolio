@@ -43,7 +43,7 @@ export default function UST() {
       title: "Project Overview",
       description:
         "Developed ML models for MBTI personality prediction using text data with 85% accuracy target.",
-      bgColor: "bg-peach",
+      bgColor: "bg-yellow",
     },
     {
       id: 2,

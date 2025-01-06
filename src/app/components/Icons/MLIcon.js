@@ -3,7 +3,7 @@ const MLIcon = ({ width, height }) => (
     {/* Brain container */}
     <path
       d="M24 6C34 6 42 14 42 24C42 34 34 42 24 42C14 42 6 34 6 24C6 14 14 6 24 6Z"
-      fill="#FFDF70"
+      fill="#F7A474"
       stroke="#2D3748"
       strokeWidth="1"
     />
