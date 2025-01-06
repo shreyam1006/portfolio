@@ -350,9 +350,9 @@ export default function Education() {
             </div>
             <div className="flex flex-col items-start space-y-1 mt-1">
               <i
-                className={`text-base text-gray-600 ${
+                className={`text-base text-black ${
                   indices.cgpa >= 1
-                    ? "border border-dotted rounded-md border-black"
+                    ? "border border-dotted rounded-md border-black "
                     : ""
                 } px-1`}
               >
