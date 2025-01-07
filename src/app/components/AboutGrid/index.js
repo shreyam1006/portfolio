@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ME from "../Images/ME.png";
+import ME from "../Images/ME2.png";
 import { useTrail, animated, easings } from "@react-spring/web";
 import { GRIDS } from "../../constants";
 
@@ -75,7 +75,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
                     alt="Profile"
                     width={1200}
                     height={1200}
-                    className="object-cover absolute top-4 right-0 rounded-2xl"
+                    className="object-cover absolute -top-8 right-0 rounded-2xl"
                     style={{ objectPosition: "center" }}
                   />
                 </div>
@@ -86,14 +86,14 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
       </div>
 
       {/* Services Ticker */}
-      <animated.div style={animatedStyles} className="mb-8">
+      <animated.div style={animatedStyles} className="mb-4">
         <animated.div style={trails[2]} className="h-full w-full">
           <div className="group relative flex overflow-x-hidden">
             <div className="flex animate-marquee group-hover:pause whitespace-nowrap">
               {[...servicesLine1, ...servicesLine1].map((service, index) => (
                 <span
                   key={`first-${index}`}
-                  className={`inline-block px-6 py-3 rounded-full text-sm font-medium border border-black mx-2 ${
+                  className={`inline-block px-6 py-3 rounded-lg text-sm font-medium border border-black mx-1 ${
                     index % 4 === 0
                       ? "bg-sage text-black"
                       : index % 4 === 1
@@ -112,7 +112,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
               {[...servicesLine1, ...servicesLine1].map((service, index) => (
                 <span
                   key={`second-${index}`}
-                  className={`inline-block px-6 py-3 rounded-full text-sm font-medium border border-black mx-2 ${
+                  className={`inline-block px-6 py-3 rounded-lg text-sm font-medium border border-black mx-1 ${
                     index % 4 === 0
                       ? "bg-sage text-black"
                       : index % 4 === 1
