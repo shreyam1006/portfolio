@@ -131,6 +131,9 @@ module.exports = {
         ".rotate-x-90": {
           transform: "rotateX(90deg)",
         },
+        ".pause": {
+          "animation-play-state": "paused",
+        },
       });
     },
   ],
