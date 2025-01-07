@@ -63,7 +63,14 @@ export default function Education() {
         cgpa: 0,
       });
     }
-  }, [isActive]);
+  }, [
+    isActive,
+    texts.cgpa.length,
+    texts.degree.length,
+    texts.major.length,
+    texts.university.length,
+    texts.year.length,
+  ]);
 
   const handleClick = () => {
     setIsActive(!isActive);

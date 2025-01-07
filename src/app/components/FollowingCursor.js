@@ -48,7 +48,7 @@ const FollowingCursor = () => {
   useEffect(() => {
     requestRef.current = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(requestRef.current);
-  }, []);
+  }, [animate]);
 
   return (
     <div className="hidden lg:block">

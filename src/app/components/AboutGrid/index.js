@@ -36,12 +36,12 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
             <div className="relative p-8">
               <div className="max-w-2xl">
                 <h1 className="text-8xl font-bold my-4">
-                  See what's in
+                  See whats in
                   <br />
                   it for you
                 </h1>
                 <p className="text-black mb-8">
-                  Since 2005, we've been giving advice to people around
+                  Since 2005, we have been giving advice to people around
                 </p>
                 <div className="flex gap-4">
                   <button className="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 border border-black hover:scale-105 transition-transform duration-300">
