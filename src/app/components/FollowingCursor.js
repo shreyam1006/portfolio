@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 const lerp = (start, end, t) => {
   return start + (end - start) * t;
@@ -36,14 +36,14 @@ const FollowingCursor = () => {
     };
   }, []);
 
-  const animate = () => {
+  const animate = useCallback(() => {
     setCurrentPosition((prev) => ({
       x: lerp(prev.x, cursorPositionRef.current.x, 0.1),
       y: lerp(prev.y, cursorPositionRef.current.y, 0.1),
     }));
 
     requestRef.current = requestAnimationFrame(animate);
-  };
+  }, []);
 
   useEffect(() => {
     requestRef.current = requestAnimationFrame(animate);
