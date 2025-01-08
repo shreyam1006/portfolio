@@ -101,6 +101,8 @@ module.exports = {
         "flip-backward": "flipBackward 0.6s forwards",
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
+        marquee3: "marquee 50s linear infinite",
+        marquee4: "marquee2 50s linear infinite",
         slideFromLeft: "slideFromLeft 0.8s ease-out",
         "flip-forward": "flip 0.6s ease-out forwards",
         "flip-backward": "flipBack 0.6s ease-out forwards",

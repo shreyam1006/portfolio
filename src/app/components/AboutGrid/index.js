@@ -15,11 +15,24 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
     },
   });
 
-  const servicesLine1 = [
-    "Web Design",
-    "Digital Marketing",
-    "APP Development",
+  const skillsLine1 = [
     "Web Development",
+    "Frontend Development",
+    "ReactJs",
+    "NextJs",
+    "Javascript",
+    "Typescript",
+    "TailwindCSS",
+    "Material",
+    "Headless UI",
+    "Redux",
+    "React Query",
+    "Zustand",
+    "NodeJs",
+    "NestJs",
+    "GraphQL",
+    "REST",
+    "PostgreSQL",
   ];
 
   return (
@@ -75,7 +88,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
                     alt="Profile"
                     width={1200}
                     height={1200}
-                    className="object-cover absolute -top-2 right-0 rounded-2xl scale-125"
+                    className="object-cover absolute rounded-2xl scale-125"
                     style={{ objectPosition: "center" }}
                   />
                 </div>
@@ -89,8 +102,8 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
       <animated.div style={animatedStyles} className="mb-4">
         <animated.div style={trails[2]} className="h-full w-full">
           <div className="group relative flex overflow-x-hidden">
-            <div className="flex animate-marquee group-hover:pause whitespace-nowrap">
-              {[...servicesLine1, ...servicesLine1].map((service, index) => (
+            <div className="flex animate-marquee3 group-hover:pause whitespace-nowrap">
+              {[...skillsLine1, ...skillsLine1].map((service, index) => (
                 <span
                   key={`first-${index}`}
                   className={`inline-block px-6 py-3 rounded-lg text-sm font-medium border border-black mx-1 ${
@@ -108,8 +121,8 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
               ))}
             </div>
 
-            <div className="flex absolute top-0 animate-marquee2 group-hover:pause whitespace-nowrap">
-              {[...servicesLine1, ...servicesLine1].map((service, index) => (
+            <div className="flex absolute top-0 animate-marquee4  group-hover:pause whitespace-nowrap">
+              {[...skillsLine1, ...skillsLine1].map((service, index) => (
                 <span
                   key={`second-${index}`}
                   className={`inline-block px-6 py-3 rounded-lg text-sm font-medium border border-black mx-1 ${
