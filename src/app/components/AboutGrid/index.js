@@ -75,7 +75,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
                     alt="Profile"
                     width={1200}
                     height={1200}
-                    className="object-cover absolute -top-8 right-0 rounded-2xl"
+                    className="object-cover absolute -top-2 right-0 rounded-2xl scale-125"
                     style={{ objectPosition: "center" }}
                   />
                 </div>
