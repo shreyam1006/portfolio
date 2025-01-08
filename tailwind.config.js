@@ -78,9 +78,8 @@ module.exports = {
           to: { transform: "rotate(360deg)" },
         },
         starScale: {
-          "0%": { transform: "scale(0.35)" },
-          "50%": { transform: "scale(1)" },
-          "100%": { transform: "scale(0.35)" },
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.5)" },
         },
         scale: {
           "0%": { transform: "scale(0.25)" },
@@ -91,6 +90,10 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "50%": { transform: "translateX(10px)" },
           "100%": { transform: "translateX(0)" },
+        },
+        slideLine: {
+          "0%": { transform: "scaleX(0)", transformOrigin: "left" },
+          "100%": { transform: "scaleX(1)", transformOrigin: "left" },
         },
       },
       animation: {
@@ -114,6 +117,7 @@ module.exports = {
         "star-scale": "starScale 4s linear infinite",
         "card-spread": "cardSpread 1.5s ease-in-out infinite",
         scale: "scale 4s ease-in-out infinite",
+        "slide-line": "slideLine 2s linear infinite",
       },
     },
   },

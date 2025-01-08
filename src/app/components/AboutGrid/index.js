@@ -9,7 +9,7 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faStar } from "@fortawesome/free-solid-svg-icons";
 
 const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
   const trails = useTrail(7, {
@@ -124,6 +124,42 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
           <animated.div style={trails[1]} className="h-full w-full">
             <div className="relative p-8">
               <div className="relative">
+                <div className="w-32 h-16 z-20 left-80 rounded-full border border-black top-16 bg-yellow absolute">
+                  <div
+                    className="bg-lavender w-20 h-3 rounded-full mt-4 ml-5 border border-black animate-slide-line"
+                    style={{ animationDuration: "2s" }}
+                  ></div>
+                  <div
+                    className="bg-skyblue w-10 h-3 rounded-full mt-2 ml-5 border border-black animate-slide-line"
+                    style={{ animationDelay: "2s", animationDuration: "2s" }}
+                  ></div>
+                </div>
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="absolute -top-1 left-12 text-yellow text-2xl animate-star-scale z-10"
+                  style={{
+                    filter:
+                      "drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black)",
+                  }}
+                />
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="absolute top-6 left-5 text-peach text-2xl animate-star-scale z-10"
+                  style={{
+                    animationDelay: "0.5s",
+                    filter:
+                      "drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black)",
+                  }}
+                />
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className="absolute top-8 left-16 text-lavender text-2xl animate-star-scale z-10"
+                  style={{
+                    animationDelay: "1s",
+                    filter:
+                      "drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black)",
+                  }}
+                />
                 <div className="w-[420px] h-[420px] flex items-center justify-center relative rounded-full border border-black bg-pink">
                   <Image
                     src={ME}
