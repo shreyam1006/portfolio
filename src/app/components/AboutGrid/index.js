@@ -124,7 +124,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
           <animated.div style={trails[1]} className="h-full w-full">
             <div className="relative p-8">
               <div className="relative">
-                <div className="w-32 h-16 z-20 left-80 rounded-full border border-black top-16 bg-yellow absolute">
+                <div className="w-32 h-16 z-20 left-80 rounded-full border-2 border-black top-16 bg-yellow absolute">
                   <div
                     className="bg-lavender w-20 h-3 rounded-full mt-4 ml-5 border border-black animate-slide-line"
                     style={{ animationDuration: "2s" }}
@@ -160,7 +160,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
                       "drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black)",
                   }}
                 />
-                <div className="w-[420px] h-[420px] flex items-center justify-center relative rounded-full border border-black bg-pink">
+                <div className="w-[420px] h-[420px] flex items-center justify-center relative rounded-full border-2 border-black bg-pink">
                   <Image
                     src={ME}
                     alt="Profile"
