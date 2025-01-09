@@ -66,15 +66,19 @@ export default function UST() {
             height={40}
             className="object-contain rounded-lg"
           />
-          <h3 className="text-xl font-semibold text-black">
+          <h3 className="text-xl font-semibold text-black sm:line-clamp-1">
             UST Software India
           </h3>
         </div>
 
-        <div className="inline-flex items-center gap-3 px-3 py-1 rounded-xl border border-dashed border-black">
-          <span className="font-medium text-black">Jun 2021</span>
+        <div className="inline-flex items-center gap-1 px-3 py-1 rounded-xl border border-dashed border-black text-sm">
+          <span className="font-medium text-black sm:line-clamp-1">
+            Jun 2021
+          </span>
           <span className="text-black">-</span>
-          <span className="font-medium text-black">Aug 2021</span>
+          <span className="font-medium text-black sm:line-clamp-1">
+            Aug 2021
+          </span>
         </div>
       </div>
       <div className="cursor-pointer hover:scale-105 transition-all bg-white max-w-2xl w-full px-5 py-2 mb-4 border border-black text-center">

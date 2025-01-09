@@ -39,7 +39,7 @@ export default function GluelabsIntern() {
   const baseEllipseA = isMobile ? 96 : 144;
   const baseEllipseB = isMobile ? 60 : 90;
   const centerX = "50%";
-  const centerY = "38%"; // Moved up from 50% to 35%
+  const centerY = "38%";
   const rotationAngle = 15;
 
   const ellipses = [
@@ -135,10 +135,10 @@ export default function GluelabsIntern() {
   ];
 
   return (
-    <div className="h-full w-full flex justify-between">
-      <div className="flex flex-col items-center w-[40%]">
+    <div className="h-full w-full flex justify-between flex-col lg:flex-row">
+      <div className="flex flex-col items-center lg:w-[40%]">
         {/* Header */}
-        <div className="flex justify-between items-center mb-4 w-full">
+        <div className="flex justify-between items-center mb-3 lg:mb-4 w-full">
           <div className="flex items-center gap-2">
             <Image
               src={GlueLabsLogo}
@@ -164,13 +164,13 @@ export default function GluelabsIntern() {
           </h2>
         </div>
 
-        <div className="relative">
+        <div className="relative xl:scale-75 xl:-translate-y-4 translate-y-4">
           <Image
             src={Design}
             alt="Work Logo"
             width={300}
             height={300}
-            className="object-contain rounded-lg -mt-[38px] relative z-10"
+            className="object-contain rounded-lg -mt-8 xl:-mt-[38px] relative z-10"
           />
           {ellipses.map((ellipse, index) => {
             const x =
@@ -226,13 +226,13 @@ export default function GluelabsIntern() {
           })}
         </div>
       </div>
-      <div className="h-full flex items-center w-[60%] ml-6">
+      <div className="h-full flex items-center lg:w-[60%] ml-6">
         <div className="flex flex-wrap gap-6 justify-center items-center">
           {cards.map((card) => (
             <div
               key={card.id}
-              className={`w-[240px] h-[160px] ${card.bgColor} ${card.rotation}
-              transition-all duration-500 ease-in-out cursor-pointer hover:scale-105 
+              className={`w-[200px] h-[160px] ${card.bgColor} ${card.rotation}
+              transition-all duration-500 ease-in-out cursor-pointer hover:scale-105
                relative border border-black rounded-lg
               overflow-hidden`}
               onClick={() =>
