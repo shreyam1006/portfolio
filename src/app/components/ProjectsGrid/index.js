@@ -1,6 +1,6 @@
 import { useTrail, animated, easings } from "@react-spring/web";
-import { GRIDS } from "../../constants";
-import LandingPage from "../LandingPage";
+import { useRouter } from "next/navigation";
+import { GRIDS, ROUTES } from "../../constants";
 import Xg from "./Xg";
 import Dashgen from "./Dashgen";
 import Dam from "./Dam";
@@ -10,6 +10,7 @@ import ReviewMate from "./ReviewMate";
 import Heading from "./Heading";
 
 export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
+  const router = useRouter();
   const trails = useTrail(7, {
     from: { scale: 0 },
     to: { scale: 1 },
@@ -61,7 +62,9 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        onClick={() => setCurrentGrid(GRIDS[0])}
+        onClick={() =>
+          setCurrentGrid ? setCurrentGrid(GRIDS[0]) : router.push(ROUTES.HOME)
+        }
         className="order-first lg:order-none lg:col-span-3 lg:row-span-3  min-h-[250px]"
       >
         <animated.div

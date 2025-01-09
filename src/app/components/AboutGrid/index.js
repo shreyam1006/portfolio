@@ -1,12 +1,13 @@
-import React from "react";
 import { useTrail, animated, easings } from "@react-spring/web";
-import { GRIDS } from "../../constants";
+import { useRouter } from "next/navigation";
+import { GRIDS, ROUTES } from "../../constants";
 import HeaderSection from "./HeaderSection";
 import ProfileImage from "./ProfileImage";
 import SkillsTicker from "./SkillsTicker";
 import FeatureCards from "./FeatureCards";
 
 const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
+  const router = useRouter();
   const trails = useTrail(7, {
     from: { scale: 0 },
     to: { scale: 1 },
@@ -22,7 +23,9 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
       <div className="flex flex-col lg:flex-row justify-between items-center mb-6 gap-4">
         <animated.div
           style={animatedStyles}
-          onClick={() => setCurrentGrid(GRIDS[0])}
+          onClick={() =>
+            setCurrentGrid ? setCurrentGrid(GRIDS[0]) : router.push(ROUTES.HOME)
+          }
           className="group relative w-full"
         >
           <animated.div style={trails[0]} className="h-full w-full">
@@ -32,7 +35,9 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
 
         <animated.div
           style={animatedStyles}
-          onClick={() => setCurrentGrid(GRIDS[0])}
+          onClick={() =>
+            setCurrentGrid ? setCurrentGrid(GRIDS[0]) : router.push(ROUTES.HOME)
+          }
           className="group relative"
         >
           <animated.div style={trails[1]} className="h-full w-full">
