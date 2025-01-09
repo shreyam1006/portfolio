@@ -155,7 +155,7 @@ export default function GluelabsIntern() {
             <span className="font-medium text-black">Sep 2022</span>
           </div>
         </div>
-        <div className="cursor-pointer hover:scale-105 transition-all bg-white w-full px-5 py-2 mb-4 border border-black text-center">
+        <div className="cursor-pointer hover:scale-105 transition-all bg-white w-full px-5 py-2 mb-4 border border-black text-center max-w-2xl">
           <h2 className="font-neutral-900 text-3xl font-bold text-pink">
             Software Development
           </h2>
