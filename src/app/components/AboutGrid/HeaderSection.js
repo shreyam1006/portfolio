@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -8,6 +8,27 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const HeaderSection = () => {
+  const [nameIdx, setNameIdx] = useState(0);
+  const name = "Shreya Maheshwari".split("");
+
+  const [titleIdx, setTitleIdx] = useState(0);
+  const title = "Software Development Engineer".split("");
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (nameIdx < name.length) {
+        setNameIdx(nameIdx + 1);
+      }
+      if (titleIdx < title.length) {
+        setTitleIdx(titleIdx + 1);
+      }
+    }, 100);
+
+    return () => {
+      clearInterval(id);
+    };
+  });
+
   return (
     <div className="relative px-8 md:px-12 py-10 bg-skyblue border border-black rounded-xl">
       <div className="border-2 border-black border-dotted rounded-lg bg-pink w-fit px-4 py-1 font-semibold text-2xl text-black">
@@ -15,11 +36,13 @@ const HeaderSection = () => {
       </div>
       <div className="">
         <p className="text-black text-4xl mt-3">Hi 👋🏻, I am</p>
-        <h2 className="text-5xl md:text-7xl font-bold my-4 max-w-2xl">
-          Shreya Maheshwari
+        <h2 className="text-pink text-5xl md:text-6xl font-bold my-4 max-w-2xl border border-black bg-white p-4">
+          {name.slice(0, nameIdx).join("")}
+          <span className="inline-block mx-2 w-6 h-1 bg-pink animate-pulse"></span>
         </h2>
         <p className="text-black text-3xl md:text-4xl mb-4 font-medium">
-          Software Development Engineer
+          {title.slice(0, titleIdx).join("")}
+          <span className="inline-block w-3 h-0.5 mx-1 bg-black animate-pulse"></span>
         </p>
         <p className="text-black text-xl mb-8">
           A software developer who loves turning ideas to exciting web
