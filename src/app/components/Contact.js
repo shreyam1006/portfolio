@@ -3,8 +3,6 @@ import {
   faGithub,
   faInstagram,
   faLinkedinIn,
-  faXTwitter,
-  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "../styles/contact.css";

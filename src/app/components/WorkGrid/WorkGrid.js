@@ -38,51 +38,44 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
   });
 
   return (
-    <animated.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-6 w-full min-h-screen lg:h-screen p-3 sm:p-4 lg:p-5 gap-3 sm:gap-4 lg:gap-5 bg-stone-200">
-      {/* Left section */}
-      <animated.div
-        style={animatedStyles}
-        className="md:col-span-1 lg:col-span-4 lg:row-span-6 h-[200px] md:h-auto"
-      >
-        <animated.div
-          className="w-full h-full bg-yellow rounded-2xl p-8 border border-black"
-          style={trails[1]}
-        >
-          <Gluelabs />
-        </animated.div>
-      </animated.div>
-
-      {/* Top right section split into two */}
-      <div className="md:col-span-1 lg:col-span-8 lg:row-span-3 h-[200px] md:h-auto grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
+    <animated.div className="grid grid-cols-1 xl:grid-cols-12 xl:grid-rows-6 w-full min-h-screen xl:h-screen p-3 sm:p-4 xl:p-5 gap-3 sm:gap-4 xl:gap-5 bg-stone-200">
+      {/* Work Experience heading */}
+      <div className="xl:col-span-8 xl:row-span-3 min-h-[250px] xl:h-auto grid grid-cols-1 xl:grid-cols-2 gap-3 sm:gap-4 xl:gap-5 order-1">
         {/* Work Experience heading */}
         <animated.div
           style={animatedStyles}
-          className="col-span-1 cursor-pointer"
+          className="xl:col-span-1 cursor-pointer"
           onClick={() => setCurrentGrid(GRIDS[0])}
         >
           <animated.div
             style={trails[2]}
-            className="w-full h-full bg-lavender rounded-2xl p-10 gap-3 text-center flex flex-col items-center justify-center border border-black"
+            className="w-full h-full bg-lavender rounded-2xl p-6 sm:p-8 xl:p-10 gap-3 text-center flex flex-col items-center justify-center border border-black"
           >
-            <div className="border border-neutral-900 bg-white w-fit px-2 py-3">
-              <span className="text-6xl font-bold text-pink" id="home">
+            <div className="border border-neutral-900 bg-white w-fit px-2 py-2 sm:py-3">
+              <span
+                className="text-4xl sm:text-5xl xl:text-6xl font-bold text-pink"
+                id="home"
+              >
                 {name.slice(0, nameIdx).join("")}
-                <span className="inline-block mx-2 w-6 h-1 bg-lavender animate-pulse"></span>
+                <span className="inline-block mx-2 w-4 sm:w-6 h-1 bg-lavender animate-pulse"></span>
               </span>
             </div>
-            <div className="border text-center border-neutral-900 bg-white w-fit px-5 py-2">
-              <span className="md:text-md font-bold text-pink">
+            <div className="border text-center border-neutral-900 bg-white w-fit px-3 sm:px-5 py-1 sm:py-2">
+              <span className="text-sm sm:text-base xl:text-lg font-bold text-pink">
                 {subheading.slice(0, subheadingIdx).join("")}
-                <span className="inline-block w-3 h-0.5 mx-1 bg-lavender animate-pulse"></span>
+                <span className="inline-block w-2 sm:w-3 h-0.5 mx-1 bg-lavender animate-pulse"></span>
               </span>
             </div>
           </animated.div>
         </animated.div>
 
-        {/* Second block */}
-        <animated.div style={animatedStyles} className="col-span-1">
+        {/* UST section - Only visible in xl */}
+        <animated.div
+          style={animatedStyles}
+          className="hidden xl:block xl:col-span-1"
+        >
           <animated.div
-            className="w-full h-full bg-sage rounded-2xl p-8 border border-black"
+            className="w-full h-full bg-sage rounded-2xl p-5 sm:p-6 xl:p-8 border border-black"
             style={trails[2]}
           >
             <UST />
@@ -90,16 +83,42 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         </animated.div>
       </div>
 
-      {/* Bottom section */}
+      {/* Left section - Gluelabs */}
       <animated.div
         style={animatedStyles}
-        className="md:col-span-1 lg:col-span-8 lg:row-span-3 h-[200px] md:h-auto"
+        className="xl:col-span-4 xl:row-span-6 min-h-[300px] xl:h-auto order-2"
       >
         <animated.div
-          className="w-full h-full bg-skyblue rounded-2xl p-8 border border-black"
+          className="w-full h-full bg-yellow rounded-2xl p-5 sm:p-6 xl:p-8 border border-black"
+          style={trails[1]}
+        >
+          <Gluelabs />
+        </animated.div>
+      </animated.div>
+
+      {/* Bottom section - GluelabsIntern */}
+      <animated.div
+        style={animatedStyles}
+        className="xl:col-span-8 xl:row-span-3 min-h-[300px] xl:h-auto order-3"
+      >
+        <animated.div
+          className="w-full h-full bg-skyblue rounded-2xl p-5 sm:p-6 xl:p-8 border border-black"
           style={trails[3]}
         >
           <GluelabsIntern />
+        </animated.div>
+      </animated.div>
+
+      {/* UST section - Only visible below xl */}
+      <animated.div
+        style={animatedStyles}
+        className="xl:hidden min-h-[300px] order-4"
+      >
+        <animated.div
+          className="w-full h-full bg-sage rounded-2xl p-5 sm:p-6 xl:p-8 border border-black"
+          style={trails[2]}
+        >
+          <UST />
         </animated.div>
       </animated.div>
     </animated.div>
