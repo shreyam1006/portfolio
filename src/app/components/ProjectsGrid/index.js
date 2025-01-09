@@ -62,7 +62,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       <animated.div
         style={animatedStyles}
         onClick={() => setCurrentGrid(GRIDS[0])}
-        className="lg:col-span-3 lg:row-span-3  min-h-[250px]"
+        className="order-first lg:order-none lg:col-span-3 lg:row-span-3  min-h-[250px]"
       >
         <animated.div
           style={trails[0]}
