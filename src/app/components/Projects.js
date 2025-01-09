@@ -273,23 +273,6 @@ export default function Projects() {
           fill="#C6B1EA"
           stroke="#000"
         />
-        <g
-          id="ewEtQUf14pr69_to"
-          style={{
-            offsetPath:
-              "path('M81.698795,100.07005Q163.994974,54.715908,172.616601,102.905154C181.238228,151.0944,138.913879,155.173859,165.562543,183.229554C192.211207,211.285249,239.238262,188.7693,267.454495,159.202883C295.670728,129.636466,347.793523,145.607908,347.808675,168.337652')",
-            offsetRotate: "0deg",
-          }}
-        >
-          <path
-            d="M37.641889,35.240104l2.795265,6.580615L37.449242,43.09l-2.791488-6.584393-4.449761,6.131079L30.14,21.72l15,14.577838Z"
-            transform="translate(-37.639999,-32.404997)"
-            fill="#fff"
-            stroke="#000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </g>
       </svg>
 
       <div className="cursor-pointer hover:scale-105 transition-all lg:absolute bottom-3 bg-yellow w-fit px-5 py-2 m-3 border border-black">
