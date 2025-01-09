@@ -18,6 +18,13 @@ module.exports = {
         skyblue: "#B6CDDC",
       },
       keyframes: {
+        bulbColors: {
+          "0%, 100%": { fill: "#C6B1EA" },
+          "20%": { fill: "#F480A3" },
+          "40%": { fill: "#C8D98E" },
+          "60%": { fill: "#FFDF70" },
+          "80%": { fill: "#B6CDDC" },
+        },
         dropFall: {
           "0%": {
             transform: "translateY(0)",
@@ -115,6 +122,7 @@ module.exports = {
         },
       },
       animation: {
+        "bulb-colors": "bulbColors 10s linear infinite",
         "water-drop": "dropFall 2s infinite",
         "water-drop-1": "dropFall 2s infinite",
         "water-drop-2": "dropFall 2s infinite",

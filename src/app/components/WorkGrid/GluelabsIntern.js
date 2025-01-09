@@ -60,49 +60,10 @@ export default function GluelabsIntern() {
     },
   ];
 
-  const icons = {
-    optimization: (
-      <Image
-        src={OptimiseIcon}
-        alt="Optimization"
-        width={80}
-        height={80}
-        className="object-contain"
-      />
-    ),
-    userExperience: (
-      <Image
-        src={UXIcon}
-        alt="User Experience"
-        width={80}
-        height={80}
-        className="object-contain"
-      />
-    ),
-    interface: (
-      <Image
-        src={UIIcon}
-        alt="Interface"
-        width={80}
-        height={80}
-        className="object-contain"
-      />
-    ),
-    collaboration: (
-      <Image
-        src={TeamIcon}
-        alt="Team Collaboration"
-        width={80}
-        height={80}
-        className="object-contain"
-      />
-    ),
-  };
-
   const cards = [
     {
       id: 1,
-      icon: icons.optimization,
+      icon: OptimiseIcon,
       title: "Image Optimization",
       description:
         "Implemented efficient image handling and optimization techniques.",
@@ -110,7 +71,7 @@ export default function GluelabsIntern() {
     },
     {
       id: 2,
-      icon: icons.userExperience,
+      icon: UXIcon,
       title: "User Experience",
       description:
         "Improved user experience through intuitive design solutions.",
@@ -118,7 +79,7 @@ export default function GluelabsIntern() {
     },
     {
       id: 3,
-      icon: icons.interface,
+      icon: UIIcon,
       title: "UI Revamps",
       description:
         "Redesigned interfaces to enhance user interaction and feedback.",
@@ -126,7 +87,7 @@ export default function GluelabsIntern() {
     },
     {
       id: 4,
-      icon: icons.collaboration,
+      icon: TeamIcon,
       title: "Team Collaboration",
       description:
         "Fostered effective team collaboration and code quality practices.",
@@ -137,7 +98,6 @@ export default function GluelabsIntern() {
   return (
     <div className="h-full w-full flex justify-between flex-col lg:flex-row">
       <div className="flex flex-col items-center lg:w-[40%]">
-        {/* Header */}
         <div className="flex justify-between items-center mb-3 lg:mb-4 w-full">
           <div className="flex items-center gap-2">
             <Image
@@ -249,7 +209,13 @@ export default function GluelabsIntern() {
                   }`}
               >
                 <div className="flex flex-col items-center justify-center h-full">
-                  {card.icon}
+                  <Image
+                    src={card.icon}
+                    alt={card.title}
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
                   <h3 className="text-xl font-semibold text-black mt-2">
                     {card.title}
                   </h3>

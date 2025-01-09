@@ -43,9 +43,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
 
   return (
     <animated.div className="grid grid-cols-1 xl:grid-cols-12 xl:grid-rows-6 w-full min-h-screen xl:h-screen p-3 sm:p-4 xl:p-5 gap-3 sm:gap-4 xl:gap-5 bg-stone-200">
-      {/* Work Experience heading */}
       <div className="xl:col-span-8 xl:row-span-3 min-h-[250px] xl:h-auto grid grid-cols-1 xl:grid-cols-2 gap-3 sm:gap-4 xl:gap-5">
-        {/* Work Experience heading */}
         <animated.div
           style={animatedStyles}
           className="xl:col-span-1 cursor-pointer"
@@ -75,7 +73,6 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
           </animated.div>
         </animated.div>
 
-        {/* UST section - Only visible in xl */}
         <animated.div
           style={animatedStyles}
           className="hidden xl:block xl:col-span-1"
@@ -89,7 +86,6 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         </animated.div>
       </div>
 
-      {/* Left section - Gluelabs */}
       <animated.div
         style={animatedStyles}
         className="xl:col-span-4 xl:row-span-6 min-h-[300px] xl:h-auto order-2"
@@ -102,7 +98,6 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         </animated.div>
       </animated.div>
 
-      {/* Bottom section - GluelabsIntern */}
       <animated.div
         style={animatedStyles}
         className="xl:col-span-8 xl:row-span-3 min-h-[300px] xl:h-auto order-3"
@@ -115,7 +110,6 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
         </animated.div>
       </animated.div>
 
-      {/* UST section - Only visible below xl */}
       <animated.div
         style={animatedStyles}
         className="xl:hidden min-h-[300px] order-4"

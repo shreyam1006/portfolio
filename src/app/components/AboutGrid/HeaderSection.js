@@ -6,6 +6,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const HeaderSection = () => {
   const [nameIdx, setNameIdx] = useState(0);
@@ -52,36 +53,42 @@ const HeaderSection = () => {
           experiences that feels like touching grass.
         </p>
         <div className="flex gap-4 mt-4">
-          <a
+          <Link
             href="https://www.linkedin.com/in/shreyam1006"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 bg-yellow flex items-center justify-center text-xl transition-all hover:scale-110 cursor-pointer border border-black rounded-lg"
+            onClick={(e) => e.stopPropagation()}
           >
             <FontAwesomeIcon icon={faLinkedinIn} className="text-black" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/shreyam1006"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 bg-sage flex items-center justify-center text-xl transition-all hover:scale-110 cursor-pointer border border-black rounded-lg"
+            onClick={(e) => e.stopPropagation()}
           >
             <FontAwesomeIcon icon={faGithub} className="text-black" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.instagram.com/shreyaamaheshwary/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 bg-pink flex items-center justify-center text-xl transition-all hover:scale-110 cursor-pointer border border-black rounded-lg"
+            onClick={(e) => e.stopPropagation()}
           >
             <FontAwesomeIcon icon={faInstagram} className="text-black" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="mailto:shreya.maheshwari.2000@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-12 h-12 bg-peach flex items-center justify-center text-xl transition-all hover:scale-110 cursor-pointer border border-black rounded-lg"
+            onClick={(e) => e.stopPropagation()}
           >
             <FontAwesomeIcon icon={faEnvelope} className="text-black" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,5 @@
-import React from "react";
-
 const SkillsTicker = () => {
-  const skillsLine1 = [
+  const skillsLine = [
     "Web Development",
     "Frontend Development",
     "ReactJs",
@@ -24,7 +22,7 @@ const SkillsTicker = () => {
   return (
     <div className="group relative flex overflow-x-hidden">
       <div className="flex animate-marquee3 group-hover:pause whitespace-nowrap">
-        {[...skillsLine1, ...skillsLine1].map((service, index) => (
+        {[...skillsLine, ...skillsLine].map((service, index) => (
           <span
             key={`first-${index}`}
             className={`inline-block px-6 py-3 rounded-lg text-sm font-medium border border-black mx-1 ${
@@ -43,7 +41,7 @@ const SkillsTicker = () => {
       </div>
 
       <div className="flex absolute top-0 animate-marquee4 group-hover:pause whitespace-nowrap">
-        {[...skillsLine1, ...skillsLine1].map((service, index) => (
+        {[...skillsLine, ...skillsLine].map((service, index) => (
           <span
             key={`second-${index}`}
             className={`inline-block px-6 py-3 rounded-lg text-sm font-medium border border-black mx-1 ${

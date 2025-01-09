@@ -1,4 +1,3 @@
-import React from "react";
 import Misc from "../Misc";
 import { animated } from "@react-spring/web";
 
@@ -35,7 +34,7 @@ const FeatureCards = ({ trails }) => {
           <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-2 translate-y-2 bg-black rounded-xl"></span>
           <span
             className={`absolute inset-0 w-full h-full ${card.color} border border-neutral-900 rounded-xl`}
-          ></span>
+          />
           <div className="relative p-8">
             <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
             <div className="flex items-start gap-4 flex-col lg:flex-row">

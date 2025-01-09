@@ -16,9 +16,8 @@ export default function Gluelabs() {
   const cards = [
     {
       id: 1,
-      icon: (
-        <Image src={TeamIcon} alt="Team Leadership" width={40} height={40} />
-      ),
+      icon: TeamIcon,
+      iconAlt: "Team Leadership",
       title: "Team Leadership",
       description: "Managed development teams and technical initiatives.",
       bgColor: "bg-lavender",
@@ -28,14 +27,8 @@ export default function Gluelabs() {
     },
     {
       id: 2,
-      icon: (
-        <Image
-          src={DesignIllustration}
-          alt="UI/UX Design"
-          width={40}
-          height={40}
-        />
-      ),
+      icon: DesignIllustration,
+      iconAlt: "UI/UX Design",
       title: "UI/UX Design",
       description: "Crafted intuitive user interfaces and experiences.",
       bgColor: "bg-peach",
@@ -45,14 +38,8 @@ export default function Gluelabs() {
     },
     {
       id: 3,
-      icon: (
-        <Image
-          src={ProjectManagementIcon}
-          alt="Innovation Projects"
-          width={40}
-          height={40}
-        />
-      ),
+      icon: ProjectManagementIcon,
+      iconAlt: "Innovation Projects",
       title: "Innovation Projects",
       description: "Implemented cutting-edge technology solutions.",
       bgColor: "bg-sage",
@@ -62,14 +49,8 @@ export default function Gluelabs() {
     },
     {
       id: 4,
-      icon: (
-        <Image
-          src={SEOOptimizationIcon}
-          alt="Performance Optimization"
-          width={40}
-          height={40}
-        />
-      ),
+      icon: SEOOptimizationIcon,
+      iconAlt: "Performance Optimization",
       title: "Performance Optimization",
       description: "Enhanced system efficiency and user experience.",
       bgColor: "bg-skyblue",
@@ -79,14 +60,8 @@ export default function Gluelabs() {
     },
     {
       id: 5,
-      icon: (
-        <Image
-          src={FullStackProgrammer}
-          alt="Full Stack Development"
-          width={40}
-          height={40}
-        />
-      ),
+      icon: FullStackProgrammer,
+      iconAlt: "Full Stack Development",
       title: "Full Stack Development",
       description: "Built robust features across entire tech stack.",
       bgColor: "bg-pink",
@@ -237,7 +212,12 @@ export default function Gluelabs() {
                 <div className="relative z-10 flex flex-col items-center justify-center h-full">
                   <div className="bg-white/50 rounded-lg p-2 w-36 h-44">
                     <div className="text-black mb-1 flex justify-center">
-                      {card.icon}
+                      <Image
+                        src={card.icon}
+                        alt={card.iconAlt}
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h4 className="font-bold text-black text-center mb-2">
                       {card.title}
