@@ -137,7 +137,7 @@ const Glue = () => {
         </svg>
 
         {/* Coupon Section */}
-        <div className="relative w-[85%] h-[80%]">
+        <div className="relative xl:max-w-[85%]">
           <div className="bg-white/90 h-full relative flex rounded-2xl border border-black shadow-sm">
             {/* Top cutout */}
             <div className="absolute top-0 left-16 -translate-y-1/2 w-6 h-6 bg-pink rounded-full border-b border-black"></div>
@@ -171,7 +171,7 @@ const Glue = () => {
               </div>
 
               {/* Gift Icon */}
-              <div className="absolute right-10 top-1/2 -translate-y-1/2">
+              <div className="absolute right-4 xl:right-10 top-1/2 -translate-y-1/2">
                 <GiftIcon />
               </div>
 

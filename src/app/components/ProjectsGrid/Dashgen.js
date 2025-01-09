@@ -124,7 +124,7 @@ const Dashgen = () => {
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
       <span className="absolute inset-0 w-full h-full bg-skyblue border border-neutral-900 rounded-xl"></span>
       <div className="absolute inset-0 flex text-black">
-        <div className="relative w-1/3 h-full">
+        <div className="relative w-1/3 h-full scale-90 xl:scale-100">
           {/* AI Service Icons */}
           {icons.map((icon, index) => {
             const orbitRadius = isMobile ? 45 : 70;
@@ -212,10 +212,10 @@ const Dashgen = () => {
 
           {/* Text content */}
           <div className="relative z-10">
-            <h2 className="text-3xl text-black font-semibold">
+            <h2 className="text-2xl xl:text-3xl text-black font-semibold">
               Revolutionizing Multi-Platform AI Integration.
             </h2>
-            <p>
+            <p className="text-sm xl:text-base">
               Effortlessly Connect Top AI Models Using Your API Keys to Optimize
               Performance at a Low Cost, Ensuring Secure and Efficient
               Integrations with Minimal Setup and Management Efforts.

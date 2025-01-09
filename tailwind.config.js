@@ -18,6 +18,24 @@ module.exports = {
         skyblue: "#B6CDDC",
       },
       keyframes: {
+        dropFall: {
+          "0%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(90px) translateX(-100px)",
+            opacity: "0",
+          },
+        },
+        twinkle: {
+          "0%, 100%": {
+            opacity: "0.2",
+          },
+          "50%": {
+            opacity: "1",
+          },
+        },
         flyAway: {
           "0%": {
             transform: "translateY(0) rotateX(0)",
@@ -97,6 +115,16 @@ module.exports = {
         },
       },
       animation: {
+        "water-drop": "dropFall 2s infinite",
+        "water-drop-1": "dropFall 2s infinite",
+        "water-drop-2": "dropFall 2s infinite",
+        "water-drop-3": "dropFall 2s infinite",
+        glitter: "twinkle 1.5s infinite ease-in-out",
+        "glitter-1": "twinkle 1.5s infinite ease-in-out",
+        "glitter-2": "twinkle 1.5s infinite ease-in-out",
+        "glitter-3": "twinkle 1.5s infinite ease-in-out",
+        "glitter-4": "twinkle 1.5s infinite ease-in-out",
+        "glitter-5": "twinkle 1.5s infinite ease-in-out",
         "card-fly": "flyAway 1s ease-in forwards",
         "card-show": "showBottom 0.5s ease-out forwards",
         pulse: "pulse 2s infinite",

@@ -94,37 +94,37 @@ const WateringCan = ({ isPouring }) => {
         />
         {/* Water drops */}
         {isPouring && (
-          <g className="water-drops">
+          <g>
             <circle
               cx="15"
               cy="37"
               r="2"
               fill="#60A5FA"
-              className="animate-drop1"
+              className="animate-water-drop-1 [animation-delay:500ms]"
             />
             <circle
               cx="13"
               cy="42"
               r="2"
               fill="#60A5FA"
-              className="animate-drop2"
+              className="animate-water-drop-2 [animation-delay:1000ms]"
             />
             <circle
               cx="17"
               cy="45"
               r="2"
               fill="#60A5FA"
-              className="animate-drop3"
+              className="animate-water-drop-3 [animation-delay:2000ms]"
             />
           </g>
         )}
         {/* Glitter particles */}
-        <g className="glitter-particles">
+        <g>
           <circle
             cx="82"
             cy="25"
             r="2.5"
-            className="glitter-1"
+            className="animate-glitter-1 [animation-delay:0ms]"
             fill="#F480A3"
             stroke="#2D3748"
             strokeWidth="0.5"
@@ -133,7 +133,7 @@ const WateringCan = ({ isPouring }) => {
             cx="60"
             cy="20"
             r="2.5"
-            className="glitter-2"
+            className="animate-glitter-2 [animation-delay:300ms]"
             fill="#B6CDDC"
             stroke="#2D3748"
             strokeWidth="0.5"
@@ -142,7 +142,7 @@ const WateringCan = ({ isPouring }) => {
             cx="75"
             cy="50"
             r="2.5"
-            className="glitter-3"
+            className="animate-glitter-3 [animation-delay:600ms]"
             fill="#FFDF70"
             stroke="#2D3748"
             strokeWidth="0.5"
@@ -151,7 +151,7 @@ const WateringCan = ({ isPouring }) => {
             cx="85"
             cy="40"
             r="2.5"
-            className="glitter-4"
+            className="animate-glitter-4 [animation-delay:900ms]"
             fill="#C8D98E"
             stroke="#2D3748"
             strokeWidth="0.5"
@@ -160,64 +160,13 @@ const WateringCan = ({ isPouring }) => {
             cx="68"
             cy="35"
             r="2.5"
-            className="glitter-5"
+            className="animate-glitter-5 [animation-delay:1200ms]"
             fill="#F7A474"
             stroke="#2D3748"
             strokeWidth="0.5"
           />
         </g>
       </svg>
-      <style jsx>{`
-        @keyframes dropFall {
-          0% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(90px) translateX(-100px);
-            opacity: 0;
-          }
-        }
-        @keyframes twinkle {
-          0%,
-          100% {
-            opacity: 0.2;
-          }
-          50% {
-            opacity: 1;
-          }
-        }
-        .water-drops circle {
-          animation: dropFall 2s infinite;
-        }
-        .animate-drop1 {
-          animation-delay: 0.5s;
-        }
-        .animate-drop2 {
-          animation-delay: 1s;
-        }
-        .animate-drop3 {
-          animation-delay: 2s;
-        }
-        .glitter-particles circle {
-          animation: twinkle 1.5s infinite ease-in-out;
-        }
-        .glitter-1 {
-          animation-delay: 0s;
-        }
-        .glitter-2 {
-          animation-delay: 0.3s;
-        }
-        .glitter-3 {
-          animation-delay: 0.6s;
-        }
-        .glitter-4 {
-          animation-delay: 0.9s;
-        }
-        .glitter-5 {
-          animation-delay: 1.2s;
-        }
-      `}</style>
     </div>
   );
 };
@@ -286,13 +235,13 @@ const Dam = () => {
             <div className="flex justify-start mb-20 -translate-x-8">
               <WateringCan isPouring={isPouring} />
             </div>
-            <h2 className="text-4xl text-black">Organize</h2>
-            <h2 className="text-4xl text-black">Your Assets.</h2>
+            <h2 className="text-2xl xl:text-4xl text-black">Organize</h2>
+            <h2 className="text-2xl xl:text-4xl text-black">Your Assets.</h2>
           </div>
         </div>
 
         <div className="flex flex-col px-8 gap-2 text-black">
-          <p className="text-xl text-right">
+          <p className="text-lg xl:text-xl text-right">
             A software solution that centralizes, organizes, and facilitates the
             storage, retrieval, and sharing of digital assets such as images,
             videos, and documents.
