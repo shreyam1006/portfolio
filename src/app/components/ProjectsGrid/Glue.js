@@ -152,11 +152,8 @@ const Glue = () => {
               </div>
             </div>
 
-            {/* Vertical Divider */}
-            <div className="border-l border-dashed border-black h-full ml-1"></div>
-
             {/* Right section with main content */}
-            <div className="flex-1 p-3">
+            <div className="flex-1 p-3 border-l border-dashed border-black">
               {/* Header */}
               <div className="text-black mb-1 text-xs font-medium">
                 CONNECTING BRANDS & FANS
@@ -171,7 +168,7 @@ const Glue = () => {
               </div>
 
               {/* Gift Icon */}
-              <div className="absolute right-4 xl:right-10 top-1/2 -translate-y-1/2">
+              <div className="absolute right-4 xl:right-10 top-1/2 -translate-y-1/2 hidden sm:block">
                 <GiftIcon />
               </div>
 

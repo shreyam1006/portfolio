@@ -101,14 +101,14 @@ const Fifo = () => {
             `}</style>
           </svg>
         </div>
-        <div className="flex flex-col px-8 py-6 gap-2 text-black">
-          <h2 className="text-xl xl:text-3xl font-semibold text-black">
+        <div className="flex flex-col px-8 py-5 lg:py-6 gap-2 text-black">
+          <h2 className="text-xl sm:text-3xl lg:text-xl xl:text-3xl font-semibold text-black">
             Blogging Platform
           </h2>
-          <h1 className="text-xl xl:text-3xl font-semibold text-black">
+          <h1 className="text-xl sm:text-3xl lg:text-xl xl:text-3xl font-semibold text-black">
             for D2C Insights.
           </h1>
-          <p className="text-sm xl:text-base">
+          <p className="text-base lg:text-sm xl:text-base">
             A blogging platform that empowers D2C businesses with real-time
             insights and community engagement.
           </p>

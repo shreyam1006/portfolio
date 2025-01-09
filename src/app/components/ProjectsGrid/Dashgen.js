@@ -212,7 +212,7 @@ const Dashgen = () => {
 
           {/* Text content */}
           <div className="relative z-10">
-            <h2 className="text-2xl xl:text-3xl text-black font-semibold">
+            <h2 className="text-2xl sm:text-4xl lg:text-2xl xl:text-3xl text-black font-semibold pb-2">
               Revolutionizing Multi-Platform AI Integration.
             </h2>
             <p className="text-sm xl:text-base">

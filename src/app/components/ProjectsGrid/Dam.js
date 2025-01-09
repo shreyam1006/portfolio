@@ -191,7 +191,7 @@ const FlipContainer = ({ frontContent, backContent, color, index, onFlip }) => {
         }`}
         onClick={handleFlip}
       >
-        <div className="flex hover:scale-105 transition-transform flex-col items-center gap-2 bg-inherit border border-black rounded-md backface-hidden text-black">
+        <div className="flex max-w-32 max-h-32 hover:scale-105 transition-transform flex-col items-center gap-2 bg-inherit border border-black rounded-md backface-hidden text-black">
           {frontContent}
         </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-inherit border border-black text-black rounded-md backface-hidden [transform:rotateY(180deg)]">
@@ -218,7 +218,7 @@ const Dam = () => {
     <Fragment>
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
       <span className="absolute inset-0 w-full h-full bg-sage border border-neutral-900 rounded-xl"></span>
-      <div className="flex flex-col absolute inset-0 gap-10 overflow-hidden">
+      <div className="flex flex-col absolute inset-0 gap-8 sm:gap-5 lg:gap-10 overflow-hidden">
         <div className="flex gap-6">
           <div className="flex flex-col gap-1 w-full text-black font-medium self-start pb-12">
             <span className="flex bg-pink border-black border mt-4 rounded-tr-xl rounded-br-xl text-3xl px-4 py-3 w-4/5 items-center justify-end -translate-x-4 transition-all duration-500 ease-in-out hover:scale-110 hover:translate-x-4 hover:w-[85%] animate-slideFromLeft [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
@@ -235,20 +235,24 @@ const Dam = () => {
             <div className="flex justify-start mb-20 -translate-x-8">
               <WateringCan isPouring={isPouring} />
             </div>
-            <h2 className="text-2xl xl:text-4xl text-black">Organize</h2>
-            <h2 className="text-2xl xl:text-4xl text-black">Your Assets.</h2>
+            <h2 className="text-2xl sm:text-4xl lg:text-2xl xl:text-4xl text-black">
+              Organize
+            </h2>
+            <h2 className="text-2xl sm:text-4xl lg:text-2xl xl:text-4xl text-black">
+              Your Assets.
+            </h2>
           </div>
         </div>
 
         <div className="flex flex-col px-8 gap-2 text-black">
-          <p className="text-lg xl:text-xl text-right">
+          <p className="lg:text-lg xl:text-xl text-right">
             A software solution that centralizes, organizes, and facilitates the
             storage, retrieval, and sharing of digital assets such as images,
             videos, and documents.
           </p>
         </div>
 
-        <div className="grid grid-cols-5 gap-3 self-center items-center justify-center w-full px-4">
+        <div className="flex gap-3 self-center items-center justify-center w-full px-4">
           {tools.map((tool, index) => (
             <div key={index}>
               <FlipContainer

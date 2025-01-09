@@ -40,7 +40,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
   return (
     <animated.div className="grid grid-cols-1 xl:grid-cols-12 xl:grid-rows-6 w-full min-h-screen xl:h-screen p-3 sm:p-4 xl:p-5 gap-3 sm:gap-4 xl:gap-5 bg-stone-200">
       {/* Work Experience heading */}
-      <div className="xl:col-span-8 xl:row-span-3 min-h-[250px] xl:h-auto grid grid-cols-1 xl:grid-cols-2 gap-3 sm:gap-4 xl:gap-5 order-1">
+      <div className="xl:col-span-8 xl:row-span-3 min-h-[250px] xl:h-auto grid grid-cols-1 xl:grid-cols-2 gap-3 sm:gap-4 xl:gap-5">
         {/* Work Experience heading */}
         <animated.div
           style={animatedStyles}

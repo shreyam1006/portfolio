@@ -59,17 +59,17 @@ const ReviewMate = () => {
         </svg>
 
         <div className="flex flex-col px-8 pt-6 pb-4 gap-2">
-          <h2 className="text-base xl:text-xl text-black font-semibold">
+          <h2 className="text-2xl sm:text-3xl lg:text-lg xl:text-xl text-black font-semibold">
             Simplifying Feedback for E-commerce.
           </h2>
-          <p className="text-sm xl:text-base">
+          <p className="text-lg sm:text-xl lg:text-sm xl:text-base">
             Shopify app for collecting reviews via email and automated prompts.
           </p>
         </div>
 
         {/* Rating Card */}
-        <div className="flex-1 flex items-center justify-center px-3 xl:px-8 pb-6">
-          <div className="bg-yellow rounded-lg py-1 xl:py-3 border border-black w-full">
+        <div className="flex-1 flex items-center justify-center px-3 xl:px-8 xl:pb-6">
+          <div className="bg-yellow rounded-lg py-3 lg:py-1 xl:py-3 border border-black w-full">
             <div className="flex items-center gap-1 ml-2">
               <div className="flex items-center -space-x-3 scale-75 xl:scale-100">
                 <div
@@ -92,7 +92,7 @@ const ReviewMate = () => {
               <div className="flex flex-col ml-2">
                 <span className="text-base xl:text-xl font-medium">100K+</span>
                 <p className="text-sm xl:text-base">
-                  <span className="hidden xl:inline-block">Customer</span>{" "}
+                  <span className="lg:hidden xl:inline-block">Customer</span>{" "}
                   <span>Reviews</span>
                 </p>
               </div>

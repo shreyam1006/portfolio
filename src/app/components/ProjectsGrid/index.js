@@ -21,10 +21,10 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
   });
 
   return (
-    <animated.div className="grid grid-cols-1 lg:grid-cols-9 lg:grid-rows-9 w-screen lg:h-screen p-5 gap-5 bg-stone-200">
+    <animated.div className="grid grid-cols-1 min-h-screen lg:grid-cols-9 lg:grid-rows-9 w-screen lg:h-screen p-5 gap-5 bg-stone-200">
       <animated.div
         style={animatedStyles}
-        className="row-start-4 lg:row-span-3 lg:col-span-5"
+        className="lg:row-span-3 lg:col-span-5 min-h-[500px] sm:min-h-[300px] lg:min-h-[250px]"
       >
         <animated.div
           style={trails[1]}
@@ -36,7 +36,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:row-span-3 lg:col-span-4"
+        className="lg:row-span-3 lg:col-span-4 min-h-[300px] sm:min-h-[250px]"
       >
         <animated.div
           style={trails[3]}
@@ -49,7 +49,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:col-span-3 lg:row-span-6 "
+        className="lg:col-span-3 lg:row-span-6 min-h-[500px] lg:min-h-[250px]"
       >
         <animated.div
           style={trails[2]}
@@ -62,7 +62,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       <animated.div
         style={animatedStyles}
         onClick={() => setCurrentGrid(GRIDS[0])}
-        className="row-start-1 lg:col-span-3 lg:row-span-3"
+        className="lg:col-span-3 lg:row-span-3  min-h-[250px]"
       >
         <animated.div
           style={trails[0]}
@@ -74,7 +74,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:row-span-3 lg:col-span-3"
+        className="lg:row-span-3 lg:col-span-3  min-h-[250px]"
       >
         <animated.div
           style={trails[4]}
@@ -86,7 +86,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:row-span-3 lg:col-span-4"
+        className="lg:row-span-3 lg:col-span-4  min-h-[250px]"
       >
         <animated.div
           style={trails[5]}
@@ -99,7 +99,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:row-span-3 lg:col-span-2"
+        className="lg:row-span-3 lg:col-span-2 min-h-[250px] sm:min-h-[200px] lg:min-h-[250px]"
       >
         <animated.div
           style={trails[4]}
