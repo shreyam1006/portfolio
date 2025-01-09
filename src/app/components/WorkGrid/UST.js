@@ -77,14 +77,14 @@ export default function UST() {
           <span className="font-medium text-black">Aug 2021</span>
         </div>
       </div>
-      <div className="cursor-pointer hover:scale-105 transition-all bg-white w-full px-5 py-2 mb-4 border border-black text-center">
+      <div className="cursor-pointer hover:scale-105 transition-all bg-white max-w-2xl w-full px-5 py-2 mb-4 border border-black text-center">
         <h2 className="font-neutral-900 text-3xl font-bold text-pink">
           Summer Project Intern
         </h2>
       </div>
 
       {/* Duck Stickers */}
-      <div className="flex justify-center gap-8 w-full">
+      <div className="flex justify-center gap-2 sm:gap-8 w-full">
         <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
           <Image
             src={DuckSticker5}
