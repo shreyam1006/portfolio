@@ -1,4 +1,4 @@
-import Misc from "../Misc";
+import Misc from "../Icons/Misc";
 import { animated } from "@react-spring/web";
 
 const FeatureCards = ({ trails }) => {

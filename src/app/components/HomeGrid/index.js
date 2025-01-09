@@ -7,8 +7,8 @@ import Education from "./Education";
 import Resume from "./Resume";
 import About from "./About";
 import Contact from "./Contact";
-import Misc from "./Misc";
-import { GRIDS } from "../constants";
+import Misc from "../Icons/Misc";
+import { GRIDS } from "../../constants";
 
 export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
   const [nameIdx, setNameIdx] = useState(0);

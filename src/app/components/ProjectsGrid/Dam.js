@@ -4,7 +4,7 @@ import MediaIcon from "../Icons/MediaIcon";
 import LogosIcon from "../Icons/LogosIcon";
 import LinksIcon from "../Icons/LinksIcon";
 import DocumentsIcon from "../Icons/DocumentsIcon";
-import Misc from "../Misc";
+import Misc from "../Icons/Misc";
 import WateringCan from "./WateringCan";
 
 const tools = [

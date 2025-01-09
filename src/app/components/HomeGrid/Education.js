@@ -1,6 +1,6 @@
-import "../styles/education.css";
+import EducationIcon from "../Icons/EducationIcon";
+import "./styles/education.css";
 import { useState, useEffect } from "react";
-import EducationIcon from "./Icons/EducationIcon";
 
 export default function Education() {
   const [isActive, setIsActive] = useState(false);

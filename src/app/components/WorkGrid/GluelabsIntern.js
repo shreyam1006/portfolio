@@ -2,7 +2,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Image from "next/image";
 import GlueLabsLogo from "../../components/Images/GlueLabs.png";
-import "../../styles/gluelabs.css";
 import Design from "../Images/Laptop.gif";
 import TeamIcon from "../Images/Team.png";
 import UIIcon from "../Images/UI.png";

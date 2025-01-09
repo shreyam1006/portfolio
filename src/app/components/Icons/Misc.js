@@ -1,4 +1,4 @@
-import "../styles/misc.css";
+import "../HomeGrid/styles/misc.css";
 
 const colorMap = {
   lavender: "#C6B1EA",

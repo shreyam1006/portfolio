@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import GlueLabsLogo from "../../components/Images/GlueLabs.png";
-import "../../styles/gluelabs.css";
 import Puzzle from "../Icons/Puzzle";
 import TeamIcon from "../Images/Team Icon.png";
 import DesignIllustration from "../Images/Design Illustration.png";
