@@ -77,14 +77,20 @@ export default function Education() {
   };
 
   return (
-    <div className="flex flex-row items-center justify-center lg:block overflow-hidden">
-      <EducationIcon />
+    <div className="flex flex-col-reverse items-center justify-center lg:block overflow-hidden">
+      {!isActive && <EducationIcon />}
       <div
         onClick={handleClick}
         className={`cursor-pointer transform transition-all duration-300 ease-in-out w-fit px-6 py-4 m-3 border border-black lg:absolute bg-yellow text-pink
           ${isActive ? "scale-110 border-none" : "hover:scale-105"}`}
       >
-        <h2 className="font-neutral-900 text-3xl font-bold">Education</h2>
+        <h2
+          className={`font-neutral-900 text-3xl font-bold ${
+            isActive ? "md:hidden xl:block" : "block"
+          }`}
+        >
+          Education
+        </h2>
         <div
           className={`mt-4 space-y-2 transition-all duration-500 ease-in-out overflow-hidden
             ${
@@ -93,8 +99,8 @@ export default function Education() {
                 : "opacity-0 max-h-0 hidden"
             }`}
         >
-          <div className="border border-black p-2 bg-white h-[135px] w-[370px]">
-            <div className="flex gap-6 h-[60px]">
+          <div className="border border-black p-2 bg-white h-full w-full">
+            <div className="flex flex-col sm:flex-row sm:gap-6">
               <div className="flex flex-col">
                 <i className="text-xl font-semibold text-gray-800">
                   {texts.degree.slice(0, indices.degree)}
@@ -110,7 +116,7 @@ export default function Education() {
                     )}
                 </i>
               </div>
-              <i className="text-lg font-medium text-indigo-600 self-end">
+              <i className="text-lg font-medium text-indigo-600 sm:self-end">
                 {texts.university.slice(0, indices.university)}
                 {indices.university < texts.university.length &&
                   indices.major === texts.major.length && (
@@ -132,7 +138,7 @@ export default function Education() {
                     <span className="inline-block mx-1 w-2 h-3 bg-gray-600 animate-pulse"></span>
                   )}
               </i>
-              <i className="text-base font-semibold text-indigo-500">
+              <i className="text-base font-semibold text-indigo-500 hidden xl:block">
                 {texts.cgpa.slice(0, indices.cgpa)}
                 {indices.cgpa < texts.cgpa.length &&
                   indices.year === texts.year.length && (
