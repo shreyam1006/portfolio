@@ -9,3 +9,5 @@ export const GRIDS = [
   { label: "work", Component: WorkGrid },
   { label: "about", Component: AboutGrid },
 ];
+
+export const publicRoutes = ["/"];
