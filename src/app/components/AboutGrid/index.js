@@ -1,4 +1,5 @@
 import React from "react";
+import Misc from "../Misc";
 import Image from "next/image";
 import ME from "../Images/ME2.png";
 import { useTrail, animated, easings } from "@react-spring/web";
@@ -43,8 +44,8 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-stone-200 px-8 py-4 border border-black text-black">
-      <div className="flex justify-between items-center mb-6 gap-4">
+    <div className="min-h-screen bg-stone-200 px-8 pt-4 pb-10 md:py-4 border border-black text-black">
+      <div className="flex flex-col lg:flex-row justify-between items-center mb-6 gap-4">
         <animated.div
           style={animatedStyles}
           onClick={() => setCurrentGrid(GRIDS[0])}
@@ -53,16 +54,16 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
           <animated.div style={trails[0]} className="h-full w-full">
             <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-3 translate-y-3 bg-black rounded-xl"></span>
             <span className="absolute inset-0 w-full h-full bg-skyblue border border-neutral-900 rounded-xl"></span>
-            <div className="relative px-12 py-10">
+            <div className="relative px-8 md:px-12 py-10">
               <div className="border-2 border-black border-dotted rounded-lg bg-pink w-fit px-4 py-1 font-semibold text-2xl text-black">
                 About
               </div>
               <div className="">
                 <p className="text-black text-4xl mt-3">Hi 👋🏻, I am</p>
-                <h2 className="text-7xl font-bold my-4 max-w-2xl">
+                <h2 className="text-5xl md:text-7xl font-bold my-4 max-w-2xl">
                   Shreya Maheshwari
                 </h2>
-                <p className="text-black text-4xl mb-4 font-medium">
+                <p className="text-black text-3xl md:text-4xl mb-4 font-medium">
                   Software Development Engineer
                 </p>
                 <p className="text-black text-xl mb-8">
@@ -124,7 +125,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
           <animated.div style={trails[1]} className="h-full w-full">
             <div className="relative p-8">
               <div className="relative">
-                <div className="w-32 h-16 z-20 left-80 rounded-full border-2 border-black top-16 bg-yellow absolute">
+                <div className="w-28 md:w-32 h-16 z-20 -right-6 -md:right-12 rounded-full border-2 border-black top-16 bg-yellow absolute">
                   <div
                     className="bg-lavender w-20 h-3 rounded-full mt-4 ml-5 border border-black animate-slide-line"
                     style={{ animationDuration: "2s" }}
@@ -160,13 +161,13 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
                       "drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black)",
                   }}
                 />
-                <div className="w-[420px] h-[420px] flex items-center justify-center relative rounded-full border-2 border-black bg-pink">
+                <div className="w-[320px] h-[320px] md:w-[420px] md:h-[420px] flex items-center justify-center relative rounded-full border-2 border-black bg-pink">
                   <Image
                     src={ME}
                     alt="Profile"
                     width={1200}
                     height={1200}
-                    className="object-cover absolute rounded-2xl scale-125"
+                    className="object-cover absolute rounded-2xl md:scale-125"
                     style={{ objectPosition: "center" }}
                   />
                 </div>
@@ -224,19 +225,25 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
       {/* Feature Cards */}
       <animated.div
         style={animatedStyles}
-        className="grid grid-cols-3 gap-8 text-black"
+        className="grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-5 text-black"
       >
         {[
           {
-            title: "Creative Ideas",
+            title: "Technical Leadership ✨",
+            description:
+              "Orchestrating digital symphonies with my awesome dev teams! Turning wild ideas into reality while keeping the good vibes flowing and creating experiences that make users smile.",
             color: "bg-sage",
           },
           {
-            title: "Market Research",
+            title: "Product Innovation 🚀",
+            description:
+              "Bringing next-gen ideas to life through clever code! Building AI-powered applications that make the digital world more exciting and user-friendly, one feature at a time.",
             color: "bg-pink",
           },
           {
-            title: "Best Solutions",
+            title: "Full-Stack Mastery 🎯",
+            description:
+              "Crafting digital experiences from front to back with passion and precision! Creating solutions that are both beautiful to look at and brilliant to use.",
             color: "bg-lavender",
           },
         ].map((card, index) => (
@@ -250,11 +257,28 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
               className={`absolute inset-0 w-full h-full ${card.color} border border-neutral-900 rounded-xl`}
             ></span>
             <div className="relative p-8">
-              <h3 className="text-xl font-bold mb-4">{card.title}</h3>
-              <p className="text-black">
-                Purchase or Refinance your mortgage today. Get the best rates &
-                services.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
+              <div className="flex items-start gap-4 flex-col lg:flex-row">
+                <p className="text-black text-lg flex-1">{card.description}</p>
+                <div className="w-28 h-28 flex-shrink-0 hidden md:block">
+                  <Misc
+                    petalColor={
+                      card.color === "bg-sage"
+                        ? "pink"
+                        : card.color === "bg-pink"
+                        ? "skyblue"
+                        : "peach"
+                    }
+                    outerCircleColor={
+                      card.color === "bg-sage"
+                        ? "skyblue"
+                        : card.color === "bg-pink"
+                        ? "peach"
+                        : "sage"
+                    }
+                  />
+                </div>
+              </div>
             </div>
           </animated.div>
         ))}
