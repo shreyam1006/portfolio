@@ -1,3 +1,4 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,8 +19,15 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-weight: 400;
-  font-style: normal !important;
+  font-style: normal !important; /* Force font-style normal */
   font-family: var(--font-afacad-flux), sans-serif;
+}
+
+/* Fix for Safari */
+@supports (-webkit-touch-callout: none) {
+  body {
+    font-style: normal !important; /* Ensures Safari doesn't override */
+  }
 }
 
 @layer utilities {
