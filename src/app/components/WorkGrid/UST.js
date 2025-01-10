@@ -89,6 +89,7 @@ export default function UST() {
         <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
           <Image
             src={Sticker5}
+            unoptimized
             alt="Sticker 1"
             width={36}
             height={36}
@@ -98,6 +99,7 @@ export default function UST() {
         <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
           <Image
             src={Sticker2}
+            unoptimized
             alt="Sticker 2"
             width={36}
             height={36}
@@ -107,6 +109,7 @@ export default function UST() {
         <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
           <Image
             src={Sticker3}
+            unoptimized
             alt="Sticker 3"
             width={36}
             height={36}
@@ -116,6 +119,7 @@ export default function UST() {
         <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
           <Image
             src={Sticker4}
+            unoptimized
             alt="Sticker 4"
             width={36}
             height={36}
@@ -125,6 +129,7 @@ export default function UST() {
         <div className="w-12 h-12 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full flex items-center justify-center border border-black">
           <Image
             src={Sticker1}
+            unoptimized
             alt="Sticker 5"
             width={36}
             height={36}

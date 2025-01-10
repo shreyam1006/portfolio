@@ -126,6 +126,7 @@ export default function GluelabsIntern() {
         <div className="relative xl:scale-75 xl:-translate-y-4 translate-y-4">
           <Image
             src={Design}
+            unoptimized
             alt="Work Logo"
             width={300}
             height={300}
