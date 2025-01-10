@@ -29,7 +29,8 @@ const afacadFlux = localFont({
 
 export const metadata = {
   title: "Shreya Maheshwari",
-  description: "This is my portfolio website",
+  description:
+    "Shreya Maheshwari is a Software Development Engineer with over 3 years experience in creating digital experiences that feels like touching grass.",
   keywords:
     "Software Developer, Software Development Engineer, Frontend Developer, Reactjs, Nextjs, Javascript",
 };
