@@ -5,7 +5,7 @@ export default function WorkExperience() {
     <div className="flex flex-col-reverse items-center justify-center lg:block">
       <svg
         id="e68ZndEqcxF1"
-        className="w-full lg:absolute bottom-0"
+        className="w-full lg:absolute bottom-0 -translate-y-10 sm:-translate-y-28 md:translate-y-0"
         viewBox="0 0 455 512"
         cached="false"
       >

@@ -168,7 +168,7 @@ export default function Contact() {
           />
         </svg>
       </div>
-      <div className="grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 md:grid-rows-2 md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-1 gap-5 md:w-1/2">
+      <div className="grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 md:grid-rows-2 md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-1 gap-5 md:w-1/2 items-center justify-items-center">
         <BlackIconWrapper
           icon={faInstagram}
           target="https://www.instagram.com/shreyaamaheshwary/"

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="flex flex-col-reverse items-center justify-center lg:block">
       <svg
-        className="w-full h-full lg:absolute bottom-0"
+        className="w-full h-full lg:absolute bottom-0 -translate-y-16 sm:-translate-y-32  md:translate-y-0"
         id="ejQcAnIEep71"
         viewBox="0 0 341 341"
         shapeRendering="geometricPrecision"

@@ -153,7 +153,7 @@ export default function UST() {
             }
             backContent={
               <div className="flex items-center justify-center h-full w-full p-6">
-                <p className="text-sm text-black text-center leading-relaxed">
+                <p className="text-xs sm:text-sm text-black text-center leading-relaxed">
                   {card.description}
                 </p>
               </div>
