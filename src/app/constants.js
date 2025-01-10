@@ -12,14 +12,6 @@ export const GRIDS = [
 
 export const ROUTES = {
   HOME: "/",
-  PROJECTS: "/projects",
-  WORK: "/work",
-  ABOUT: "/about",
 };
 
-export const publicRoutes = [
-  ROUTES.HOME,
-  ROUTES.PROJECTS,
-  ROUTES.WORK,
-  ROUTES.ABOUT,
-];
+export const publicRoutes = [ROUTES.HOME];
