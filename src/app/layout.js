@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -14,9 +13,8 @@ const afacadFlux = localFont({
   src: "./fonts/AfacadFlux.ttf",
   variable: "--font-afacad-flux",
   weight: "100 900",
+  style: "normal",
 });
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Shreya Maheshwari",
@@ -29,8 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <body className={`${afacadFlux.variable} antialiased not-italic`}> */}
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${afacadFlux.variable} antialiased not-italic`}>
+        {children}
+      </body>
     </html>
   );
 }
