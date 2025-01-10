@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./styles/contact.css";
+import Link from "next/link";
 
 function BlackIconWrapper({ icon, ...rest }) {
   return (
@@ -31,12 +32,14 @@ function RedIconWrapper({ icon, ...rest }) {
 
 function IconWrapper({ icon, bgColor, textColor, target, isEmail }) {
   return (
-    <a
+    <Link
       href={isEmail ? `mailto:${target}` : target}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`w-20 h-20 md:w-14 md:h-14 lg:w-20 lg:h-20 ${bgColor} flex items-center justify-center text-3xl transition-all hover:text-4xl cursor-pointer border border-black`}
     >
       <FontAwesomeIcon icon={icon} className={textColor} />
-    </a>
+    </Link>
   );
 }
 
