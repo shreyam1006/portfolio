@@ -26,7 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${afacadFlux.variable} antialiased`}>{children}</body>
+      <body className={`${afacadFlux.variable} antialiased not-italic`}>
+        {children}
+      </body>
     </html>
   );
 }

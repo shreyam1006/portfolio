@@ -18,7 +18,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-weight: 400;
-  font-style: normal;
+  font-style: normal !important;
   font-family: var(--font-afacad-flux), sans-serif;
 }
 
