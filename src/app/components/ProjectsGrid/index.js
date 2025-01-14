@@ -77,7 +77,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:row-span-3 lg:col-span-3  min-h-[250px]"
+        className="lg:row-span-3 lg:col-span-3  min-h-[280px]"
       >
         <animated.div
           style={trails[4]}
@@ -102,7 +102,7 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
 
       <animated.div
         style={animatedStyles}
-        className="lg:row-span-3 lg:col-span-2 min-h-[250px] sm:min-h-[200px] lg:min-h-[250px]"
+        className="lg:row-span-3 lg:col-span-2 min-h-[280px] sm:min-h-[200px] lg:min-h-[250px]"
       >
         <animated.div
           style={trails[4]}

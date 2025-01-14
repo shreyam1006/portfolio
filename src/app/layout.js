@@ -1,4 +1,4 @@
-import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -9,11 +9,11 @@ config.autoAddCss = false;
 
 library.add(faInstagram);
 
-const afacadFlux = localFont({
-  src: "./fonts/AfacadFlux.ttf",
-  variable: "--font-afacad-flux",
-  weight: "100 900",
-  style: "normal",
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal"],
 });
 
 export const metadata = {
@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${afacadFlux.variable} antialiased not-italic`}>
+      <body className={`${dmSans.variable} antialiased not-italic`}>
         {children}
       </body>
     </html>

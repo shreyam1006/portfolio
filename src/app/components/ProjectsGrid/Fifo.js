@@ -22,7 +22,7 @@ const Fifo = () => {
     <Fragment>
       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform group-hover:translate-x-2 group-hover:translate-y-2 bg-black -translate-x-0 -translate-y-0 rounded-xl"></span>
       <span className="absolute inset-0 w-full h-full bg-peach border border-neutral-900 rounded-xl"></span>
-      <div className="absolute inset-0 flex flex-col text-black">
+      <div className="absolute inset-0 flex flex-col justify-between text-black">
         <div className="absolute top-4 right-4 w-20 h-20 group">
           <BulbIcon />
         </div>
@@ -39,7 +39,7 @@ const Fifo = () => {
           </p>
         </div>
         <div>
-          <div className="group relative flex overflow-x-hidden overflow-y-hidden">
+          <div className="group relative flex overflow-x-hidden overflow-y-hidden mb-4 lg:mb-8">
             <div className="flex animate-marquee group-hover:pause">
               {newsItems.map((item, index) => (
                 <NewsItem

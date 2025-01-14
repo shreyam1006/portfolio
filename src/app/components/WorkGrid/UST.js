@@ -54,7 +54,7 @@ export default function UST() {
   ];
 
   return (
-    <div className="h-full flex flex-col items-center">
+    <div className="h-full flex flex-col items-center justify-between">
       <div className="flex justify-between items-center mb-4 w-full">
         <div className="flex items-center gap-2">
           <Image

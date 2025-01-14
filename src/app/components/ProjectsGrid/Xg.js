@@ -71,13 +71,13 @@ const Xg = () => {
 
           {/* Content - Right Side */}
           <div className="w-full sm:w-1/2 flex flex-col justify-center px-4 text-center sm:text-left">
-            <h2 className="text-2xl sm:text-4xl lg:text-2xl xl:text-4xl text-black font-semibold">
+            <h2 className="text-2xl sm:text-3xl lg:text-2xl xl:text-4xl text-black font-semibold">
               Boost Customer
             </h2>
-            <h2 className="text-2xl sm:text-4xl lg:text-2xl xl:text-4xl text-black font-semibold mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-2xl xl:text-4xl text-black font-semibold mb-4">
               Email Conversions.
             </h2>
-            <p>
+            <p className="font-normal">
               Triple email success with personalized content and curated product
               recommendations for more engaging customer interactions.
             </p>

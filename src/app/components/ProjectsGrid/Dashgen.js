@@ -196,7 +196,7 @@ const Dashgen = () => {
             <h2 className="text-2xl sm:text-4xl lg:text-2xl xl:text-3xl text-black font-semibold pb-2">
               Revolutionizing Multi-Platform AI Integration.
             </h2>
-            <p className="text-sm xl:text-base">
+            <p className="text-xs sm:text-sm xl:text-base">
               Effortlessly Connect Top AI Models Using Your API Keys to Optimize
               Performance at a Low Cost, Ensuring Secure and Efficient
               Integrations with Minimal Setup and Management Efforts.

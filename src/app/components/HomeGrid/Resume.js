@@ -4,7 +4,7 @@ export default function Resume() {
   return (
     <div className="flex flex-col-reverse items-center justify-center lg:block">
       <svg
-        className="w-full lg:absolute bottom-0"
+        className="w-full lg:absolute bottom-0 2xl:scale-90"
         id="eGNsHDgmMvZ1"
         viewBox="0 0 303 256"
         cached="false"

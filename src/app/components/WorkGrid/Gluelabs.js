@@ -102,7 +102,7 @@ export default function Gluelabs() {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row xl:flex-col flex-1 items-center">
+      <div className="flex flex-col md:flex-row xl:flex-col flex-1 items-center xl:gap-8 2xl:gap-14">
         <div className="relative md:w-1/2 xl:w-full flex items-center justify-center scale-90 sm:scale-100">
           {/* Sparkle Animation SVG */}
           <svg
@@ -176,7 +176,7 @@ export default function Gluelabs() {
         </div>
 
         {/* Cards Container */}
-        <div className="relative h-[280px] md:h-[240px] flex items-center scale-75 sm:scale-100 justify-center md:w-1/2 xl:w-full">
+        <div className="relative h-[280px] md:h-[240px] flex items-center scale-75 sm:scale-100 lg:scale-110 xl:scale-100 justify-center md:w-1/2 xl:w-full">
           {cards.map((card) => (
             <div
               key={card.id}
@@ -221,7 +221,7 @@ export default function Gluelabs() {
                     <h4 className="font-bold text-black text-center mb-2">
                       {card.title}
                     </h4>
-                    <p className="text-sm text-black text-center">
+                    <p className="text-xs text-black text-center">
                       {card.description}
                     </p>
                   </div>

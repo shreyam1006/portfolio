@@ -19,7 +19,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
   });
 
   return (
-    <div className="min-h-screen bg-stone-200 px-8 pt-4 pb-10 md:py-4 border border-black text-black">
+    <div className="min-h-screen h-full bg-stone-200 px-8 pt-4 pb-10 md:py-4 border border-black text-black">
       <div className="flex flex-col lg:flex-row justify-between items-center mb-6 gap-4">
         <animated.div
           style={animatedStyles}
@@ -52,7 +52,7 @@ const AboutGrid = ({ setCurrentGrid, animatedStyles }) => {
         </animated.div>
       </animated.div>
 
-      <animated.div style={animatedStyles}>
+      <animated.div style={animatedStyles} className="h-full w-full">
         <FeatureCards trails={trails} />
       </animated.div>
     </div>

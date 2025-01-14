@@ -46,7 +46,7 @@ function IconWrapper({ icon, bgColor, textColor, target, isEmail }) {
 export default function Contact() {
   return (
     <>
-      <div className="md:w-1/2">
+      <div className="md:w-1/2 2xl:scale-75">
         <svg id="ecfYqkDzjoQ1" viewBox="0 0 300 300" cached="true">
           <rect
             width="180"

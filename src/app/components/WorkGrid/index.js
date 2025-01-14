@@ -57,7 +57,7 @@ export default function WorkGrid({ setCurrentGrid, animatedStyles }) {
           >
             <div className="border border-neutral-900 bg-white w-fit px-2 py-2 sm:py-3">
               <span
-                className="text-4xl sm:text-5xl xl:text-6xl font-bold text-pink"
+                className="text-4xl sm:text-5xl xl:text-7xl font-bold text-pink"
                 id="home"
               >
                 {name.slice(0, nameIdx).join("")}

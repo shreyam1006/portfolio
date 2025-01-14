@@ -87,8 +87,11 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
           style={trails[0]}
           className="h-full w-full p-10 bg-lavender border border-black flex flex-col items-center justify-center gap-3 rounded-2xl"
         >
-          <div className="border border-neutral-900 bg-white w-fit px-2 py-3">
-            <span className="text-5xl font-bold text-pink" id="home">
+          <div className="border text-center border-neutral-900 bg-white w-fit px-2 py-3">
+            <span
+              className="text-4xl sm:text-5xl font-bold text-pink"
+              id="home"
+            >
               {name.slice(0, nameIdx).join("")}
               <span className="inline-block mx-2 w-6 h-1 bg-lavender animate-pulse"></span>
             </span>

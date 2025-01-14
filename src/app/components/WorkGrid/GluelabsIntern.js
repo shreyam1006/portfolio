@@ -96,7 +96,7 @@ export default function GluelabsIntern() {
 
   return (
     <div className="h-full w-full flex justify-between flex-col lg:flex-row">
-      <div className="flex flex-col items-center lg:w-[40%]">
+      <div className="flex flex-col max-w-full items-center lg:w-[40%]">
         <div className="flex justify-between items-center mb-3 lg:mb-4 w-full">
           <div className="flex items-center gap-2">
             <Image
@@ -123,7 +123,7 @@ export default function GluelabsIntern() {
           </h2>
         </div>
 
-        <div className="relative xl:scale-75 xl:-translate-y-4 translate-y-4">
+        <div className="relative xl:scale-75 xl:-translate-y-4 2xl:scale-100 2xl:translate-y-4 translate-y-4">
           <Image
             src={Design}
             unoptimized
@@ -186,14 +186,14 @@ export default function GluelabsIntern() {
           })}
         </div>
       </div>
-      <div className="h-full flex items-center lg:w-[60%] ml-6">
-        <div className="flex flex-wrap gap-6 justify-center items-center">
+      <div className="h-full flex items-center lg:w-[60%] w-full">
+        <div className="flex flex-wrap sm:flex-nowrap lg:flex-wrap gap-6 justify-center items-center lg:max-w-[640px] w-full">
           {cards.map((card) => (
             <div
               key={card.id}
               className={`w-[200px] h-[160px] ${card.bgColor} ${card.rotation}
               transition-all duration-500 ease-in-out cursor-pointer hover:scale-105
-               relative border border-black rounded-lg
+              relative border border-black rounded-lg
               overflow-hidden`}
               onClick={() =>
                 setSelectedCard(card.id === selectedCard ? null : card.id)
@@ -216,7 +216,7 @@ export default function GluelabsIntern() {
                     height={80}
                     className="object-contain"
                   />
-                  <h3 className="text-xl font-semibold text-black mt-2">
+                  <h3 className="lg:text-xl font-semibold text-black mt-2 text-center px-2">
                     {card.title}
                   </h3>
                 </div>
@@ -233,7 +233,9 @@ export default function GluelabsIntern() {
                       selectedCard === card.id ? "opacity-100" : "opacity-0"
                     }`}
                 >
-                  <p className="text-black text-center">{card.description}</p>
+                  <p className="text-black text-center text-base sm:text-sm lg:text-base">
+                    {card.description}
+                  </p>
                 </div>
               </div>
             </div>
