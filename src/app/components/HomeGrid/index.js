@@ -125,7 +125,7 @@ export default function HomeGrid({ setCurrentGrid, animatedStyles }) {
           className="h-full w-full relative border rounded-2xl border-neutral-900 bg-skyblue cursor-pointer"
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1-lKlLtRmm7Sufplr0HFrPvXtWMt93XCu/view?usp=sharing",
+              "https://drive.google.com/file/d/1XwPhV11xGdK2P4IQVP0wwvdXj-rfFs4i/view?usp=drive_link",
               "_blank"
             )
           }
